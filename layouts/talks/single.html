@@ -1,0 +1,60 @@
+{{ define "main" }}
+  <section class="section-sm">
+    <div class="container">
+      <div class="row justify-center">
+        <div class="lg:col-10">
+          <div class="bg-body dark:bg-darkmode-body">
+            <!-- Publication Title -->
+            <h1 class="mb-3">
+              {{ .Title }}
+            </h1>
+
+            <!-- Authors -->
+            {{ if .Params.authors }}
+              <div class="mb-3">
+                <span class="text-sm text-gray-600 dark:text-gray-400 font-medium">Authors:</span>
+                <span class="text-sm text-gray-800 dark:text-gray-200">
+                  {{ delimit .Params.authors ", " }}
+                </span>
+              </div>
+            {{ end }}
+
+            <!-- Publication Metadata -->
+            {{ partial "components/publication-metadata.html" . }}
+
+            <!-- Abstract -->
+            {{ if .Params.abstract }}
+              <div class="mb-4">
+                <h3 class="text-lg font-semibold mb-2">Abstract</h3>
+                <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+                  {{ .Params.abstract }}
+                </p>
+              </div>
+            {{ end }}
+
+            <!-- Content -->
+            {{ if .Content }}
+              <div class="mb-4">
+                <h3 class="text-lg font-semibold mb-2">Details</h3>
+                <div class="prose prose-gray dark:prose-invert max-w-none">
+                  {{ .Content }}
+                </div>
+              </div>
+            {{ end }}
+
+            <!-- Action Links -->
+            {{ partial "components/publication-actions.html" . }}
+
+            <!-- Navigation -->
+            <div class="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
+              <a href="/publications/" class="btn btn-outline-secondary">
+                <i class="fa-solid fa-arrow-left mr-2"></i>
+                Back to Publications
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{{ end }}

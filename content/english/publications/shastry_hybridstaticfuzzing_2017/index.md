@@ -1,0 +1,15 @@
+---
+title: "Static Exploration of Taint-Style Vulnerabilities Found by Fuzzing"
+date: 2017-08-01
+publishDate: 2017-08-01T00:00:00Z
+lastmod: 2020-06-05T09:09:58.879648Z
+authors: ["Bhargava Shastry", "Federico Maggi", "Fabian Yamaguchi", "Konrad Rieck", "Jean-Pierre Seifert"]
+publication_types: ["1"]
+abstract: "Taint-style vulnerabilities comprise a majority of fuzzer discovered program faults. These vulnerabilities usually manifest as memory access violations caused by tainted program input. Although fuzzers have helped uncover a majority of taint-style vulnerabilities in software to date, they are limited by (i) extent of test coverage; and (ii) the availability of fuzzable test cases. Therefore, fuzzing alone cannot provide a high assurance that all taint-style vulnerabilities have been uncovered.  In this paper, we use static template matching to find recurrences of fuzzer-discovered vulnerabilities. To compensate for the inherent incompleteness of template matching, we implement a simple yet effective match-ranking algorithm that uses test coverage data to focus attention on matches comprising untested code. We prototype our approach using the Clang/LLVM compiler toolchain and use it in conjunction with afl-fuzz, a modern coverage-guided fuzzer. Using a case study carried out on the Open vSwitch codebase, we show that our prototype uncovers corner cases in modules that lack a fuzzable test harness. Our work demonstrates that static analysis can effectively complement fuzz testing, and is a useful addition to the security assessment tool-set. Furthermore, our techniques hold promise for increasing the effectiveness of program analysis and testing, and serve as a building block for a hybrid vulnerability discovery framework."
+featured: false
+location: "Vancouver, BC"
+publication: "11th USENIX Workshop on Offensive Technologies USENIX Workshop on Offensive Technologies (WOOT 17)"
+tags: ["workshop"]
+url_pdf: "https://www.usenix.org/conference/woot17/workshop-program/presentation/shastry"
+---
+

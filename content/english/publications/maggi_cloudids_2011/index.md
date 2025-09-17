@@ -1,0 +1,14 @@
+---
+title: "Is the future Web more insecure? Distractions and solutions of new-old security issues and measures"
+date: 2011-06-01
+publishDate: 2011-06-01T00:00:00Z
+lastmod: 2020-06-05T08:21:22.467292Z
+authors: ["Federico Maggi", "Stefano Zanero"]
+publication_types: ["1"]
+abstract: "The world of information and communication technology is experiencing changes that, regardless of some skepticism, are bringing to life the concept of ``utility computing''. The nostalgics observed a parallel between the emerging paradigm of cloud computing and the traditional time-sharing era, depicting clouds as the modern reincarnation of mainframes available on a pay-per-use basis, and equipped with virtual, elastic, disks-as-a-service that replace the old physical disks with quotas. This comparison is fascinating, but more importantly, in our opinion, it prepares the ground for constructive critiques regarding the security of such a computing paradigm and, especially, one of its key components: web services. In this paper we discuss our position about the current countermeasures (e.g., intrusion detection systems, anti-malware), developed to mitigate well-known web security threats. By reasoning on said affinities, we focus on the simple case study of anomaly-based approaches, which are employed in many modern protection tools, not just in intrusion detectors. We illustrate our position by the means of a simple running example and show that attacks against injection vulnerabilities, a widespread menace that is easily recognizable with ordinary anomaly-based checks, can be difficult to detect if web services are protected as they were regular web applications. Along this line, we concentrate on a few, critical hypotheses that demand particular attention. Although in this emerging landscape only a minority of threats qualify as novel, they could be difficult to recognize with the current countermeasures and thus can expose web services to new attacks. We conclude by proposing simple modifications to the current countermeasures to cope with the aforesaid security issues."
+featured: false
+pages: "1--9"
+isbn: "978-1-4577-1449-8"
+publication: "Proceedings of the Worldwide Cybersecurity Summit"
+---
+

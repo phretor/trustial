@@ -1,0 +1,15 @@
+---
+title: "GreatEatlon: Fast, Static Detection of Mobile Ransomware"
+date: 2016-10-10
+publishDate: 2016-10-10T00:00:00Z
+lastmod: 2020-06-05T08:21:22.232178Z
+authors: ["Chenghyu Zheng", "Nicola Della Rocca", "Niccolò Andronio", "Stefano Zanero", "Maggi Federico"]
+publication_types: ["1"]
+abstract: "Ransomware is a class of malware that aim at preventing victims from accessing valuable data, typically via data encryption or device locking, and ask for a payment to release the target. In the past year, instances of ransomware attacks have been spotted on mobile devices too. However, despite their relatively low infection rate, we notice that the techniques used by mobile ransomware are quite sophisticated, and different from those used by ransomware against traditional computers.  Through an in-depth analysis of about 100 samples of currently active ransomware apps, we conclude that most of them pass undetected by state-of-the-art tools, which are unable to recognize the abuse of benign features for malicious purposes. The main reason is that such tools rely on an inadequate and incomplete set of features. The most notable examples are the abuse of reflection and device-administration APIs, appearing in modern ransomware to evade analysis and detection, and to elevate their privileges (e.g., to lock or wipe the device). Moreover, current solutions introduce several false positives in the na ̈ıve way they detect cryptographic-APIs abuse, flagging goodware apps as ransomware merely because they rely on cryptographic libraries. Last but not least, the performance overhead of current approaches is unacceptable for appstore-scale workloads.  In this work, we tackle the aforementioned limitations and propose GreatEatlon, a next-generation mobile ransomware detector. We foresee GreatEatlon deployed on the appstore side, as a preventive countermeasure. At its core, GreatEatlon uses static program-analysis techniques to ``resolve'' reflection-based, anti-analysis attempts, to recognize abuses of the device administration API, and extract accurate data-flow information required to detect truly malicious uses of cryptographic APIs. Given the significant resources utilized by Great- Eatlon, we prepend to its core a fast pre-filter that quickly discards obvious goodware, in order to avoid wasting computer cycles.  We tested GreatEatlon on thousands of samples of goodware, generic malware and ransomware applications, and showed that it surpasses current approaches both in speed and detection capabilities, while keeping the false negative rate below 1.3%. "
+featured: false
+location: "Guangzhou, People's Republic of China"
+pages: "617--636"
+isbn: "978-3-319-59608-2"
+publication: ""
+---
+

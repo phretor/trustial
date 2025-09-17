@@ -1,0 +1,29 @@
+{{ define "main" }}
+  {{ partial "page-header" . }}
+
+  <section class="section-sm">
+    <div class="container">
+      <div class="row justify-center">
+        <div class="lg:col-10">
+          {{ if .Content }}
+            <div class="content mb-12">
+              {{ .Content }}
+            </div>
+          {{ end }}
+
+          {{ $publications := where site.RegularPages "Type" "publications" }}
+          {{ if $publications }}
+            <div class="space-y-8">
+              {{ range $publications.ByDate.Reverse }}
+                {{ partial "components/publication-card.html" . }}
+              {{ end }}
+            </div>
+          {{ else }}
+            {{ partial "components/publication-empty-state.html" . }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+{{ end }}

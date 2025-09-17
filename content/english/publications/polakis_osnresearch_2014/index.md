@@ -1,0 +1,15 @@
+---
+title: "Security and Privacy Measurements on Social Networks: Experiences and Lessons Learned"
+date: 2014-09-01
+publishDate: 2014-09-01T00:00:00Z
+lastmod: 2020-06-05T09:09:58.885332Z
+authors: ["Iasonas Polakis", "Federico Maggi", "Stefano Zanero", "Angelos D. Keromytis"]
+publication_types: ["1"]
+abstract: "We describe our experience gained while exploring practical security and privacy problems in a real-world, large- scale social network (i.e., Facebook), and summarize our conclusions in a series of \"lessons learned\". We first conclude that it is better to adequately describe the potential ethical concerns from the very beginning and plan ahead the institutional review board (IRB) request. Even though sometimes optional, the IRB approval is a valuable point from the reviewer's perspective. Another aspect that needs planning is getting in touch with the online social network security team, which takes a substantial amount of time. With their support, \"bending the rules\" (e.g., using scrapers) when the experimental goals require so, is easier. Clearly, in cases where critical technical vulnerabilities are found during the research, the general recommendations for responsible disclosure should be followed. Gaining the audience's engagement and trust was essential to the success of our user study. Participants felt more comfortable when subscribing to our experiments, and also responsibly reported bugs and glitches. We did not observe the same behavior in crowd-sourcing workers, who were instead more interested in obtaining their rewards. On a related point, our experience suggests that crowd sourcing should not be used alone: Setting up tasks is more time consuming than it seems, and researchers must insert some sentinel checks to ensure that workers are not submitting random answers.From a logistics point of view, we learned that having at least a high-level plan of the experiments pays back, especially when the IRB requires a detailed description of the work and the data to be collected. However, over planning can be dangerous because the measurement goals can change dynamically. From a technical point of view, partially connected to the logistics remarks, having a complex and large data-gathering and analysis framework may be counterproductive in terms of set-up a- d management overhead. From our experience we suggest to choose simple technologies that scale up if needed but, more importantly, can scale down. For example, launching a quick query should be straightforward, and the frameworks should not impose too much overhead for formulating it. We conclude with a series of practical recommendations on how to successfully collect data from online social networks (e.g., using techniques for network multipresence, mimicking user behavior, and other crawling \"tricks\"') and avoid abusing the online service, while gathering the data required by the experiments."
+featured: false
+location: "Wroclaw, Poland"
+pages: "18-29"
+publication: "2014 Third International Workshop on Building Analysis Datasets and Gathering Experience Returns for Security (BADGERS)"
+tags: ["workshop"]
+---
+

@@ -25,7 +25,6 @@ features = [
   "Search",
   "Multilingual",
   "Dark Mode",
-  "Taxonomies",
 ]
 
 [author]

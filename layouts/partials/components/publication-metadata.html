@@ -1,0 +1,56 @@
+<!-- Publication Details -->
+<div class="flex flex-wrap gap-4 mb-4 text-sm text-gray-600 dark:text-gray-400">
+  {{ if .Params.institution }}
+    <div class="flex items-center">
+      <i class="fa-solid fa-building mr-1"></i>
+      <span>{{ .Params.institution }}</span>
+    </div>
+  {{ end }}
+
+  {{ if .Date }}
+    <div class="flex items-center">
+      <i class="fa-solid fa-calendar mr-1"></i>
+      <time datetime="{{ .Date.Format "2006-01-02" }}">
+        {{ .Date.Format "January 2006" }}
+      </time>
+    </div>
+  {{ end }}
+
+  {{ if .Params.publication }}
+    <div class="flex items-center">
+      <i class="fa-solid fa-journal-whills mr-1"></i>
+      <span>{{ .Params.publication | truncate 80 }}</span>
+    </div>
+  {{ end }}
+
+  {{ if .Params.event }}
+    <div class="flex items-center">
+      <i class="fa-solid fa-location mr-1"></i>
+     {{ if .Params.event_url }}
+      <a href="{{ .Params.event_url }}">{{ .Params.event | truncate 80 }}</a>
+      {{ else }}
+      <span>{{ .Params.event | truncate 80 }}</span>
+     {{ end }}
+    </div>
+  {{ end }}
+
+  {{ if .Params.publication_types }}
+    <div class="flex items-center">
+      <i class="fa-solid fa-file-alt mr-1"></i>
+      <span>
+        {{ range .Params.publication_types }}
+          {{ if eq . "1" }}Journal Article
+          {{ else if eq . "2" }}Conference Paper
+          {{ else if eq . "3" }}Talk
+          {{ else if eq . "4" }}Technical Report
+          {{ else if eq . "5" }}Book
+          {{ else if eq . "6" }}Book Chapter
+          {{ else if eq . "7" }}Thesis
+          {{ else if eq . "8" }}Patent
+          {{ else }}Publication
+          {{ end }}
+        {{ end }}
+      </span>
+    </div>
+  {{ end }}
+</div>

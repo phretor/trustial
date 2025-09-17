@@ -1,0 +1,24 @@
+<div class="bg-body dark:bg-darkmode-body">
+  <!-- Publication Title -->
+  <h4 class="mb-3">
+    <a href="{{ .RelPermalink }}" class="text-gray-900 dark:text-white">
+      {{ .Title }}
+    </a>
+  </h4>
+
+  <!-- Authors -->
+  {{ if .Params.authors }}
+    <div class="mb-3">
+      <span class="text-sm text-gray-600 dark:text-gray-400 font-medium">Authors:</span>
+      <span class="text-sm text-gray-800 dark:text-gray-200">
+        {{ delimit .Params.authors ", " }}
+      </span>
+    </div>
+  {{ end }}
+
+  <!-- Publication Metadata -->
+  {{ partial "components/publication-metadata.html" . }}
+
+  <!-- Action Links -->
+  {{ partial "components/publication-actions.html" . }}
+</div>

@@ -1,0 +1,14 @@
+---
+title: "AndroTotal: A Scalable Framework for Android Antivirus Testing"
+date: 2013-11-20
+publishDate: 2013-11-20T00:00:00Z
+lastmod: 2020-06-05T09:07:15.467156Z
+authors: ["Federico Maggi"]
+publication_types: ["3"]
+abstract: ""
+featured: false
+location: "Nova Gorica, Slovenia"
+howpublished: "Invited Talk"
+event: "InfoSek"
+---
+
