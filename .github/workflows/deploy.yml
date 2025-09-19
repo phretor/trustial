@@ -36,9 +36,6 @@ jobs:
       with:
         go-version: '1.21'
 
-    - name: Update theme
-      run: npm run update-theme
-
     - name: Update modules
       run: npm run update-modules
 
