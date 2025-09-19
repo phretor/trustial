@@ -1,4 +1,4 @@
-# Trustial.org
+# Trustial
 
 > Federico Maggi's professional digital space - cybersecurity engineering, research, and strategic insights.
 
@@ -39,14 +39,14 @@
 ### Repository Structure
 
 ```
-┌─────────────────────────┐    GitHub Actions    ┌─────────────────────────-─┐
-│ phretor/trustial        │ ──────────────────►  │ phretor/trustial.org      │
-│ (Private Source Repo)   │     Automated CI/CD  │ (Public Hosting Repo)     │
-│                         │                      │                           │
-│ • Hugo source code      │                      │ • Built static files      │
-│ • Content & assets      │                      │ • GitHub Pages hosting    │
-│ • Theme customizations  │                      │ • Public website          │
-└─────────────────────────┘                      └─────────────────────────-─┘
+┌─────────────────────────┐    GitHub Actions    ┌─────────────────────────┐
+│ phretor/trustial        │ ──────────────────►  │ phretor/trustial.org    │
+│ (Private Source Repo)   │     Automated CI/CD  │ (Public Hosting Repo)   │
+│                         │                      │                         │
+│ • Hugo source code      │                      │ • Built static files    │
+│ • Content & assets      │                      │ • GitHub Pages hosting  │
+│ • Theme customizations  │                      │ • Public website        │
+└─────────────────────────┘                      └─────────────────────────┘
 ```
 
 ### Automated Deployment
@@ -76,9 +76,9 @@ DEPLOY_TOKEN = <your-personal-access-token>
 
 The deployment workflow (`.github/workflows/deploy.yml`) is pre-configured with:
 
-- **Source Repository**: `phretor/trustial.org` (this repo)
-- **Target Repository**: `phretor/phretor.github.io`
-- **Branch**: Deploys from `main` to `main`
+- **Source Repository**: `phretor/trustial` (this repo)
+- **Target Repository**: `phretor/trustial.org`
+- **Branch**: Deploys from `main` to `gh-pages`
 
 To modify the target repository, update the `external_repository` field in the workflow file.
 
@@ -89,8 +89,8 @@ To modify the target repository, update the `external_repository` field in the w
 1. **Clone the repository**:
 
    ```bash
-   git clone git@github.com:phretor/trustial.org.git
-   cd trustial.org
+   git clone git@github.com:phretor/trustial.git
+   cd trustial
    ```
 
 2. **Install dependencies**:
@@ -223,4 +223,4 @@ Content and customizations are proprietary. The underlying Hugoplate theme follo
 
 ---
 
-**Trustial.org** - Bridging complex security challenges with practical business strategy.
+**Trustial** - Bridging complex security challenges with practical business strategy.

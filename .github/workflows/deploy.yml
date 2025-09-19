@@ -46,8 +46,8 @@ jobs:
       uses: peaceiris/actions-gh-pages@v4
       with:
         personal_token: ${{ secrets.DEPLOY_TOKEN }}
-        external_repository: phretor/phretor.github.io
-        publish_branch: main
+        external_repository: phretor/trustial.org
+        publish_branch: gh-pages
         publish_dir: ./public
         user_name: 'github-actions[bot]'
         user_email: 'github-actions[bot]@users.noreply.github.com'
