@@ -1,5 +1,6 @@
 ---
 title: Talks
+meta_title: Talks by Federico Maggi | Trustial
 
 # View.
 #   1 = List

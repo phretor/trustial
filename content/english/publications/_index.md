@@ -1,5 +1,6 @@
 ---
 title: Publications
+meta_title: Publications by Federico Maggi | Trustial
 
 # View.
 #   1 = List
@@ -12,7 +13,4 @@ view: 4
 header:
   caption: ""
   image: ""
-
-aliases:
-  - /publications/
 ---
