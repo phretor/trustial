@@ -64,13 +64,19 @@ Almost a decade later, I started to figure it out.
 
 One turning point was watching a talk by Prof. Herbert Bos: he delivered deeply technical content with such clarity, humor, and control that I learned more about in those 30 minutes than I had in some entire courses. Another was attending a speaker training session by Raimund Genes, then-CTO of Trend Micro, whose approach to message delivery and “entertaining through technical content” changed my view of speaking.
 
-Over the past decade, I’ve seen my own presentation quality improve significantly. I was (and still I am) far from being a good professional speaker, but people say I’m good at speaking. Have a look at some of [my public speeches to get a sense of my speaking style](https://www.youtube.com/playlist?list=PL8hbvIylvVeiC3CeGDQ1NJXEI9fCZKN0x).
+Over the past decade, I’ve seen my own presentation quality improve significantly. I was (and still I am) far from being a professional speaker, but people say I’m good at speaking. Have a look at some of [my public speeches to get a sense of my speaking style](https://www.youtube.com/playlist?list=PL8hbvIylvVeiC3CeGDQ1NJXEI9fCZKN0x).
+
+{{< youtube 8LBG7qDtDm4 >}}
+
+<br />
+
+{{< youtube RKLUWnzIaP4 >}}
+
+## From Public Speaking to Speaker Coaching
 
 I started noticing that some presentations just stuck better, not because they were more advanced, but because they were intentionally designed. But I couldn’t yet fully grasp how.
 
 That moment came in 2021, when I discovered [Amazon’s working-backward approach](https://workingbackwards.com/), the idea that great outcomes are engineered by starting with the end clearly in mind. The best presentations weren’t just well delivered and well rehearsed—they were strategically and intentionally planned, starting from the last slide.
-
-## Speaker Coaching
 
 Ironically, as my speaking quality improved, my opportunities to present began to shrink: fewer talks, fewer slides, fewer stages, more day-to-day work priorities.
 

@@ -3,7 +3,7 @@
 banner:
   title: "I bridge complex security challenges with practical business strategy."
   content: >
-    I'm **Federico Maggi**, a cybersecurity engineer, researcher, and advisor leading security for the latest hyperscale AI & infrastructure technology and platforms. I’m experienced in offensive and defensive security research on embedded systems, radio-frequency control systems, industrial robots, cars, and devices. I help transform complex security engineering & research  challenges into actionable business insights and guide the next generation of cybersecurity professionals. 
+    I'm **Federico Maggi**, a cybersecurity engineer, researcher, and advisor leading security for the latest hyperscale AI & infrastructure technology and platforms. I have hands-on experience in offensive and defensive security research on embedded systems, radio-frequency control systems, industrial robots, cars, and devices.  I help transform complex security engineering & research  challenges into actionable business insights and guide the next generation of cybersecurity professionals. 
     <br /><br />
     Trustial is the name I chose for my digital space.
   button:

@@ -1,7 +1,12 @@
 <!-- Action Links -->
+
+{{ $page := . }}
+{{ $slug := $page.File.ContentBaseName }}
+{{ $resource := $page.Resources.GetMatch (printf "%s.pdf" $slug) }}
+
 <div class="flex flex-wrap">
-  {{ if .Params.url_pdf }}
-    <a href="{{ .Params.url_pdf }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary">
+  {{ if $resource }}
+    <a href="{{ $resource }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary">
       <i class="fa-solid fa-file-pdf mr-1"></i>
       PDF
     </a>
