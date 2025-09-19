@@ -36,8 +36,11 @@ jobs:
       with:
         go-version: '1.21'
 
-    - name: Initialize Hugo modules
-      run: hugo mod download
+    - name: Update theme
+      run: npm run update-theme
+
+    - name: Update modules
+      run: npm run update-modules
 
     - name: Cache Hugo resources
       uses: actions/cache@v4
@@ -48,7 +51,7 @@ jobs:
           ${{ runner.os }}-hugo-resources-
 
     - name: Build Hugo site
-      run: hugo --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic
+      run: npm run build
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v4
