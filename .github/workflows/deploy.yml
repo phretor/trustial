@@ -37,6 +37,10 @@ jobs:
 
       - name: Build site
         run: npm run build
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3.0.1
+        with:
+          path: ./public
 
   deploy:
     runs-on: ubuntu-24.04
