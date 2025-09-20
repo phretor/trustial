@@ -1,1 +1,6 @@
 /* Add your own custom styles here */
+
+/* Fix for TailwindCSS purging - target only nav-toggle without breaking responsive navigation */
+#nav-toggle.hidden {
+  display: none !important;
+}

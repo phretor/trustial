@@ -41,7 +41,7 @@ path = 'page'
 ############################# Build ##############################
 [build]
 [build.buildStats]
-enable = true
+enable = false
 [[build.cachebusters]]
 source = 'assets/notwatching/hugo_stats\.json'
 target = 'css'
