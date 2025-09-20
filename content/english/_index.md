@@ -31,7 +31,7 @@ features:
       - "60+ peer-reviewed papers"
       - "Program chair, review board, Black Hat reviewer, and conference service."
       - "Open-source contributions into security and training tools."
-      - "PhD award winner, Associate Professor, moved to AWS Security."
+      - "PhD award winner, Assistant Professor, moved to AWS Security."
       - "Hundreds of students and speakers mentored since 2009."
 
   - title: "Technical Communication & Professional Development"
