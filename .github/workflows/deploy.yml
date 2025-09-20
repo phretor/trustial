@@ -11,7 +11,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-24.04-arm
+    runs-on: ubuntu-24.04
     steps:
       - name: Install Hugo
         run: |
@@ -43,7 +43,7 @@ jobs:
         run: npm run build
 
   deploy:
-    runs-on: ubuntu-24.04-arm
+    runs-on: ubuntu-24.04
     needs: build
     steps:
     - name: Deploy to GitHub Pages
