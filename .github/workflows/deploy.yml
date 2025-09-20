@@ -35,10 +35,10 @@ jobs:
       uses: actions/setup-go@v5
       with:
         go-version: '1.21'
-
+    - name: Update theme
+      run: npm run update-theme
     - name: Update modules
       run: npm run update-modules
-
     - name: Cache Hugo resources
       uses: actions/cache@v4
       with:
