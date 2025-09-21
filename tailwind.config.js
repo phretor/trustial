@@ -18,7 +18,21 @@ module.exports = {
     'header',
     'navbar',
     'nav-link',
-    'nav-item'
+    'nav-item',
+
+    // Classes that may be inconsistently detected between environments
+    'top-1/2',
+    'left-1/2',
+    'z-10',
+    'm-3',
+    'mr-5',
+    'ml-2',
+    'ml-auto',
+    'hidden',
+    'inline-flex',
+    'h-6',
+    '-translate-x-1/2',
+    '-translate-y-1/2'
   ],
   theme: {
     extend: {},
