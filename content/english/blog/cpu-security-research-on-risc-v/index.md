@@ -6,8 +6,8 @@ tags: [Fuzzing]
 categories: [Hardware, Silicon, Security]
 image: featured.webp
 aliases:
- - silicon-fuzzing
- - o-riscv
+ - /silicon-fuzzing
+ - /o-riscv
 ---
 
 I've embarked on a brief journey to learn RISC-V and I ended up finding a niche of interesting material on security research on fuzzing, so I pivoted my attention to that. Here's a brief summary of what I found.
