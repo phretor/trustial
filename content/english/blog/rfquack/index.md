@@ -6,6 +6,8 @@ categories: [RF, Security]
 tags: []
 draft: false
 image: imgs/mcu-teensy-cc1120-cc1101.jpg
+aliases:
+  - rfquack
 ---
 
 RFQuack is the only versatile RF-analysis tool that quacks! 🦆 RFQuack is the evolution of a prototype to help me reverse engineer sub-GHz and 2.4GHz RF protocols based on digital packet radios.
