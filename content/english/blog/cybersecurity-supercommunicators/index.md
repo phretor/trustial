@@ -62,7 +62,7 @@ So, here we go!
 
 I want to walk you through a practical, coach-tested playbook to make your talks clearer and leave a trace.
 
-This is the first post in a free, 4-week series on how to **reverse engineer, design, debug, and deliver** talks that land with impact in the high-stakes world of cybersecurity.
+This is the first post in a series on how to **reverse engineer, design, debug, and deliver** talks that land with impact in the high-stakes world of cybersecurity.
 
 My goal with this series is to give you the **guidance I wish I had when I started speaking**.
 
