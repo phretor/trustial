@@ -66,11 +66,15 @@ One turning point was watching a talk by Prof. Herbert Bos: he delivered deeply 
 
 Over the past decade, I’ve seen my own presentation quality improve significantly. I was (and still I am) far from being a professional speaker, but people say I’m good at speaking. Have a look at some of [my public speeches to get a sense of my speaking style](https://www.youtube.com/playlist?list=PL8hbvIylvVeiC3CeGDQ1NJXEI9fCZKN0x).
 
-{{< youtube 8LBG7qDtDm4 >}}
+{{< youtube Gj8g0DZvqsU >}}
 
 <br />
 
 {{< youtube RKLUWnzIaP4 >}}
+
+<br />
+
+{{< youtube 8LBG7qDtDm4 >}}
 
 ## From Public Speaking to Speaker Coaching
 
@@ -84,7 +88,7 @@ But then something fortunate happened: I was offered to volunteer as part of the
 
 This opportunity kept the momentum going, and gave me the chance to work directly with incredible technical talents from around the world: first-time speakers and seasoned researchers alike, all with important stories to tell, and raw material worth polishing. Helping them shape their talks and make their message shine has been one of the most rewarding experiences of my career.
 
-In cybersecurity, brilliant research and groundbreaking findings risk vanishingl into the noise: not because they’re unimportant, but because they’re poorly communicated. If I can help you, please [get in touch](/contacts).
+In cybersecurity, brilliant research and groundbreaking findings risk vanishing into the noise: not because they’re unimportant, but because they’re poorly communicated. If I can help you, please [get in touch](/contacts).
 
 Read [more about speaking](/blog/cybersecurity-supercommunicators/).
 
@@ -139,6 +143,6 @@ sector.
 
 ### Head shot
 
-<a href="headshot.jpg"><img style="margin-left: 0 !important;" src="headshot.jpg" width="200px" /></a>
+<a href="i/headshot/headshot.jpg"><img style="margin-left: 0 !important;" src="i/headshot/headshot.jpg" width="200px" /></a>
 
-You can also grab the <a href="headshot-hires.jpg">high-resolution version</a>.
+You can also grab the <a href="i/headshot/headshot-hires.jpg">high-resolution version</a>.
