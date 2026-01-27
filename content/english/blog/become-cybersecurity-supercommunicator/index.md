@@ -513,7 +513,7 @@ Need speaker coaching? [Get in touch](/contact)!
 
 As promised, here's the slide deck. It's quite heavy.
 
-{{< button label="️💾 Grab the slides (224M)" link="/blog/become-cybersecurity-supercommunicator/BHEU25-Speaker-Training-v6.pptx" style="solid" >}}
+{{< button label="️💾 Grab the slides (224M)" link="https://supercommunicators.trustial.org/" style="solid" >}}
 
 ## References
 
