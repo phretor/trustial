@@ -11,4 +11,3 @@ howpublished: "Invited Talk"
 event: "Catedra Europa"
 event_url: "http://www.uninorte.edu.co/web/catedra-europa"
 ---
-

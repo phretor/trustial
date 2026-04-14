@@ -11,7 +11,6 @@ draft: false
 aliases:
   - /diary/2014/06/07/andradar/
 
-
 # Projects (optional).
 #   Associate this post with one or more of your projects.
 #   Simply enter your project's folder or file name without extension.
@@ -19,6 +18,7 @@ aliases:
 #   Otherwise, set `projects = []`.
 projects: []
 ---
+
 The main goal of this project is to provide a dashboard to analyze and monitor the spreading of Android malware in marketplaces. AndRadar uses lightweight fingerprints to lookup malware samples without the need to download them from the markets.
 
 <!--more-->

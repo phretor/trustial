@@ -12,4 +12,3 @@ howpublished: "Peer-reviewed Talk"
 event: "Black Hat Briefings Abu Dhabi"
 event_url: "https://www.blackhat.com/html/bh-ad-11/bh-ad-11-archives.html"
 ---
-

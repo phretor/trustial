@@ -12,4 +12,3 @@ howpublished: "Peer-reviewed Talk"
 event: "Black Hat Briefings Europe"
 event_url: "https://www.blackhat.com/eu-21/briefings/schedule/index.html#the-data-distribution-service-dds-protocol-is-critical-lets-use-it-securely-24934"
 ---
-

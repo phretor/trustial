@@ -12,4 +12,3 @@ institution: "Politecnico di Milano"
 publication: ""
 url_pdf: "https://github.com/phretor/cs-phd-dissertation-latex-template"
 ---
-

@@ -48,9 +48,8 @@ point.
 
 ## Read More
 
-* **Technical brief:** [Rogue Robots: Testing the Limits of an Industrial Robot’s Security](https://www.trendmicro.com/vinfo/us/security/news/internet-of-things/rogue-robots-testing-industrial-robot-security)
+- **Technical brief:** [Rogue Robots: Testing the Limits of an Industrial Robot’s Security](https://www.trendmicro.com/vinfo/us/security/news/internet-of-things/rogue-robots-testing-industrial-robot-security)
 
-* **Material, F.A.Q., press:** [http://robosec.org](http://robosec.org)
+- **Material, F.A.Q., press:** [http://robosec.org](http://robosec.org)
 
-* **Elevator pitch:** [Rogue Robots - Testing the Limits of an Industrial Robot’s Security](https://www.youtube.com/watch?v=mmmvwmDq-UM)
-
+- **Elevator pitch:** [Rogue Robots - Testing the Limits of an Industrial Robot’s Security](https://www.youtube.com/watch?v=mmmvwmDq-UM)

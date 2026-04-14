@@ -12,25 +12,32 @@
             <!-- Authors -->
             {{ if .Params.authors }}
               <div class="mb-3">
-                <span class="text-sm text-gray-600 dark:text-gray-400 font-medium">Authors:</span>
+                <span
+                  class="text-sm text-gray-600 dark:text-gray-400 font-medium"
+                  >Authors:</span
+                >
                 <span class="text-sm text-gray-800 dark:text-gray-200">
                   {{ delimit .Params.authors ", " }}
                 </span>
               </div>
             {{ end }}
 
+
             <!-- Publication Metadata -->
             {{ partial "components/publication-metadata.html" . }}
+
 
             <!-- Abstract -->
             {{ if .Params.abstract }}
               <div class="mb-4">
                 <h3 class="text-lg font-semibold mb-2">Abstract</h3>
-                <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+                <p
+                  class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
                   {{ .Params.abstract }}
                 </p>
               </div>
             {{ end }}
+
 
             <!-- Content -->
             {{ if .Content }}
@@ -42,11 +49,14 @@
               </div>
             {{ end }}
 
+
             <!-- Action Links -->
             {{ partial "components/publication-actions.html" . }}
 
+
             <!-- Navigation -->
-            <div class="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
+            <div
+              class="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
               <a href="/talks/" class="btn btn-outline-secondary">
                 <i class="fa-solid fa-arrow-left mr-2"></i>
                 Back to Talks

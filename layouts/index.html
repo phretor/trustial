@@ -25,11 +25,11 @@
               {{ end }}
             {{ end }}
           </div>
-            {{ with .image }}
+          {{ with .image }}
             <div class="col-12">
               {{ partial "image" (dict "Src" . "Alt" "Banner image" "Loading" "eager" "Class" "mx-auto lg:!max-w-[800px]" "DisplayXL" "800x" ) }}
             </div>
-            {{ end }}
+          {{ end }}
         </div>
       </div>
     </section>

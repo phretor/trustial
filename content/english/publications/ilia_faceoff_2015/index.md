@@ -3,7 +3,14 @@ title: "Face/Off: Preventing Privacy Leakage From Photos in Social Networks"
 date: 2015-10-01
 publishDate: 2015-10-01T00:00:00Z
 lastmod: 2020-06-05T08:21:22.284977Z
-authors: ["Panagiotis Ilia", "Iasonas Polakis", "Elias Athanasopoulos", "Federico Maggi", "Sotiris Ioannidis"]
+authors:
+  [
+    "Panagiotis Ilia",
+    "Iasonas Polakis",
+    "Elias Athanasopoulos",
+    "Federico Maggi",
+    "Sotiris Ioannidis",
+  ]
 publication_types: ["1"]
 abstract: "The capabilities of modern devices, coupled with the almost ubiquitous availability of Internet connectivity, have resulted in photos being shared online at an unprecedented scale. This is further amplified by the popularity of social networks and the immediacy they offer in content sharing. Existing access control mechanisms are too coarse-grained to handle cases of conflicting interests between the users associated with a photo; stories of embarrassing or inappropriate photos being widely accessible have become quite common. In this paper, we propose to rethink access control when applied to photos, in a way that allows us to effectively prevent unwanted individuals from recognizing users in a photo. The core concept behind our approach is to change the granularity of access control from the level of the photo to that of a user's personally identifiable information (PII). In this work, we consider the face as the PII. When another user attempts to access a photo, the system determines which faces the user does not have the permission to view, and presents the photo with the restricted faces blurred out. Our system takes advantage of the existing face recognition functionality of social networks, and can interoperate with the current photo-level access control mechanisms. We implement a proof-of-concept application for Facebook, and demonstrate that the performance overhead of our approach is minimal. We also conduct a user study to evaluate the privacy offered by our approach, and find that it effectively prevents users from identifying their contacts in 87.35% of the restricted photos. Finally, our study reveals the misconceptions about the privacy offered by existing mechanisms, and demonstrates that users are positive towards the adoption of an intuitive, straightforward access control mechanism that allows them to manage the visibility of their face in published photos."
 featured: false
@@ -14,4 +21,3 @@ isbn: "978-1-4503-3832-5"
 publication: "Proceedings of the 22Nd ACM SIGSAC Conference on Computer and Communications Security"
 url_pdf: "http://doi.acm.org/10.1145/2810103.2813603"
 ---
-

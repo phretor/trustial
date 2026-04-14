@@ -12,4 +12,3 @@ howpublished: "Talk"
 event: "Trend Micro Direction"
 event_url: "https://direction.trendmicro.com/sess/"
 ---
-

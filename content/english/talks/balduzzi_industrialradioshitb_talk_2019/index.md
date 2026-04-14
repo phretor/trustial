@@ -13,4 +13,3 @@ event: "Hack In The Box Amsterdam"
 event_url: "https://conference.hitb.org/hitbsecconf2019ams/sessions/hey-operator-wheres-your-crane-attacking-industrial-remote-controllers/"
 url_video: https://www.youtube.com/watch?v=pEP7EOQkm_0
 ---
-

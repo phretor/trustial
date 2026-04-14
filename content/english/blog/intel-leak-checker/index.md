@@ -73,5 +73,6 @@ $ openssl rsa -modulus -noout -in privkey.pem | \
 ```
 
 ## Credits & Thanks
+
 - [Yegor Vasilenko](https://twitter.com/yeggorv) for [this](https://github.com/binarly-io/FwHunt/pull/7)
 - Photo by Jacek Halicki - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=131392254

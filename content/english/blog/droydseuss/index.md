@@ -12,7 +12,6 @@ draft: false
 aliases:
   - /diary/2016/02/05/droydseuss
 
-
 # Projects (optional).
 #   Associate this post with one or more of your projects.
 #   Simply enter your project's folder or file name without extension.
@@ -29,6 +28,6 @@ On top of this, DroydSeuss attaches meta data to both C&C endpoints and malware 
 
 We made the tool public and immediately attracted other researcher’s attention. Thanks to the data feed produced by DroydSeuss we were able to find (and confirm) one malware campaign spreading against Chinese and Korean bank customers and to discover a strange, rare sample that was using Baidu as a C&C.
 
-*(Update: Jun 6th, 2020)* We decided not to maintain the web service anymore. We only keep the URL here for hystorical reasons: [http://droydseuss.necst.it](http://droydseuss.necst.it)
+_(Update: Jun 6th, 2020)_ We decided not to maintain the web service anymore. We only keep the URL here for hystorical reasons: [http://droydseuss.necst.it](http://droydseuss.necst.it)
 
 ## References

@@ -4,46 +4,64 @@
 {{ $slug := $page.File.ContentBaseName }}
 {{ $resource := $page.Resources.GetMatch (printf "%s.pdf" $slug) }}
 
+
 <div class="flex flex-wrap">
   {{ if $resource }}
-    <a href="{{ $resource }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary">
+    <a
+      href="{{ $resource }}"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn btn-sm btn-outline-secondary">
       <i class="fa-solid fa-file-pdf mr-1"></i>
       PDF
     </a>
   {{ end }}
 
   {{ if .Params.url_source }}
-    <a href="{{ .Params.url_source }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary">
+    <a
+      href="{{ .Params.url_source }}"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn btn-sm btn-outline-secondary">
       <i class="fa-solid fa-code mr-1"></i>
       Source
     </a>
   {{ end }}
 
   {{ if .Params.url_slides }}
-    <a href="{{ .Params.url_slides }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary">
+    <a
+      href="{{ .Params.url_slides }}"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn btn-sm btn-outline-secondary">
       <i class="fa-solid fa-presentation-screen mr-1"></i>
       Slides
     </a>
   {{ end }}
 
   {{ if .Params.event_url }}
-  <a href="{{ .Params.event_url }}" class="btn btn-sm btn-outline-secondary">
-    <i class="fa-solid fa-link mr-1"></i>
-    Link
-  </a>
+    <a href="{{ .Params.event_url }}" class="btn btn-sm btn-outline-secondary">
+      <i class="fa-solid fa-link mr-1"></i>
+      Link
+    </a>
   {{ end }}
 
-  <a href="#" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary" data-modal-open>
-      <i class="fa-solid fa-quote-left mr-1"></i>
+
+  <a
+    href="#"
+    rel="noopener noreferrer"
+    class="btn btn-sm btn-outline-secondary"
+    data-modal-open>
+    <i class="fa-solid fa-quote-left mr-1"></i>
     Cite
   </a>
 
   <div class="modal" data-modal>
     <div class="modal-overlay" data-modal-close data-modal-overlay></div>
     <div class="modal-content p-6 rounded-lg shadow-lg max-w-lg relative">
-        {{ with readFile (printf "%s/cite.bib" (path.Dir .File.Path))}}
-          {{ highlight (trim . "\n\r") "bibtex" }}
-        {{ end }}
+      {{ with readFile (printf "%s/cite.bib" (path.Dir .File.Path)) }}
+        {{ highlight (trim . "\n\r") "bibtex" }}
+      {{ end }}
       <button class="modal-close" data-modal-close>&times;</button>
     </div>
   </div>

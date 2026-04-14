@@ -11,4 +11,3 @@ location: "Warsaw, Poland"
 howpublished: "Invited Talk"
 event: "Honeynet Workshop"
 ---
-

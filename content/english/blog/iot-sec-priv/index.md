@@ -11,7 +11,6 @@ date: 2015-01-26T11:53:30+02:00
 featured: false
 draft: false
 
-
 # Projects (optional).
 #   Associate this post with one or more of your projects.
 #   Simply enter your project's folder or file name without extension.

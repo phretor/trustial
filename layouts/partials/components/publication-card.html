@@ -9,15 +9,19 @@
   <!-- Authors -->
   {{ if .Params.authors }}
     <div class="mb-3">
-      <span class="text-sm text-gray-600 dark:text-gray-400 font-medium">Authors:</span>
+      <span class="text-sm text-gray-600 dark:text-gray-400 font-medium"
+        >Authors:</span
+      >
       <span class="text-sm text-gray-800 dark:text-gray-200">
         {{ delimit .Params.authors ", " }}
       </span>
     </div>
   {{ end }}
 
+
   <!-- Publication Metadata -->
   {{ partial "components/publication-metadata.html" . }}
+
 
   <!-- Action Links -->
   {{ partial "components/publication-actions.html" . }}

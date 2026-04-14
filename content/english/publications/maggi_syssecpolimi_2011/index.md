@@ -10,4 +10,3 @@ featured: false
 publication: "Proceedings of the 1st SysSec Workshop (SysSec)"
 tags: ["workshop"]
 ---
-

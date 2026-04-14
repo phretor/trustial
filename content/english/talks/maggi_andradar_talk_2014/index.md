@@ -12,4 +12,3 @@ howpublished: "Invited Talk"
 event: "HackInBo"
 event_url: "http://www.hackinbo.it/"
 ---
-

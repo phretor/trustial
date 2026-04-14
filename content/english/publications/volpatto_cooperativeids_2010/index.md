@@ -12,4 +12,3 @@ series: "Lecture Notes in Computer Science"
 isbn: "978-3-642-17196-3"
 publication: "Proceedings of the Decision and Game Theory for Security (GameSec)"
 ---
-

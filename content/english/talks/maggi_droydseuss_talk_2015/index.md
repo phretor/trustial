@@ -12,4 +12,3 @@ howpublished: "Invited Talk"
 event: "Android Security Symposium"
 event_url: "https://usmile.at/symposium/program"
 ---
-

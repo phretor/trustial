@@ -12,4 +12,3 @@ howpublished: "Peer-reviewed Demo"
 event: "HITB Amsterdam"
 event_url: "https://github.com/trendmicro/RFQuack"
 ---
-

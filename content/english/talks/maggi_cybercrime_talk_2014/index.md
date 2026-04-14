@@ -12,4 +12,3 @@ howpublished: "Invited Talk"
 event: "5th National Conference on Cyber Warfare"
 event_url: "http://www.infowar.it/past/2014_october/index.php"
 ---
-

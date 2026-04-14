@@ -1,15 +1,22 @@
 <!-- Citation Content for Hugo-Modules Modal -->
 <div class="citation-modal-content">
   <div class="mb-6">
-    <h4 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">BibTeX Citation</h4>
+    <h4 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+      BibTeX Citation
+    </h4>
     <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded border">
-      <pre class="text-sm text-gray-800 dark:text-gray-200 whitespace-pre-wrap font-mono overflow-x-auto">{{ readFile (printf "%s/cite.bib" .File.Dir) }}</pre>
+      <pre
+        class="text-sm text-gray-800 dark:text-gray-200 whitespace-pre-wrap font-mono overflow-x-auto">
+{{ readFile (printf "%s/cite.bib" .File.Dir) }}</pre
+      >
     </div>
   </div>
 
   <div class="flex flex-wrap gap-3">
-    <button onclick="copyCitation(this)" class="btn btn-outline-secondary"
-            data-citation="{{ readFile (printf "%s/cite.bib" .File.Dir) | htmlEscape }}">
+    <button
+      onclick="copyCitation(this)"
+      class="btn btn-outline-secondary"
+      data-citation="{{ readFile (printf "%s/cite.bib" .File.Dir) | htmlEscape }}">
       <i class="fa-solid fa-copy mr-2"></i>
       Copy Citation
     </button>
@@ -17,17 +24,20 @@
 </div>
 
 <script>
-function copyCitation(button) {
-  const citation = button.getAttribute('data-citation');
-  navigator.clipboard.writeText(citation).then(function() {
-    // Visual feedback
-    const originalText = button.innerHTML;
-    button.innerHTML = '<i class="fa-solid fa-check mr-2"></i>Copied!';
-    setTimeout(() => {
-      button.innerHTML = originalText;
-    }, 2000);
-  }).catch(function(err) {
-    console.error('Could not copy citation: ', err);
-  });
-}
+  function copyCitation(button) {
+    const citation = button.getAttribute("data-citation");
+    navigator.clipboard
+      .writeText(citation)
+      .then(function () {
+        // Visual feedback
+        const originalText = button.innerHTML;
+        button.innerHTML = '<i class="fa-solid fa-check mr-2"></i>Copied!';
+        setTimeout(() => {
+          button.innerHTML = originalText;
+        }, 2000);
+      })
+      .catch(function (err) {
+        console.error("Could not copy citation: ", err);
+      });
+  }
 </script>

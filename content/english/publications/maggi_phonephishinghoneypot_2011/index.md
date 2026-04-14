@@ -13,4 +13,3 @@ isbn: "978-1-4503-0768-0"
 publication: "Proceedings of the First Workshop on Building Analysis Datasets and Gathering Experience Returns for Security (BADGERS)"
 tags: ["workshop"]
 ---
-

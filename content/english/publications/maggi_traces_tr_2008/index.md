@@ -10,4 +10,3 @@ featured: false
 institution: "Politecnico di Milano"
 publication: ""
 ---
-

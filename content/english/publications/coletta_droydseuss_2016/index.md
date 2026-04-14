@@ -10,4 +10,3 @@ featured: false
 series: "Lecture Notes in Computer Science (LNCS)"
 publication: "Financial Cryptography and Data Security"
 ---
-

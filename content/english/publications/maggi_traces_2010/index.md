@@ -11,4 +11,3 @@ pages: "257--264"
 isbn: "978-0-7695-4108-2"
 publication: "Proceedings of the International Conference on Computer and Information Technology (CIT)"
 ---
-

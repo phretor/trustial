@@ -34,7 +34,7 @@ and enumerate industrial routers, and the security posture of their vendors.
 <!--more-->
 
 Industrial routers aren't just regular routers in a rugged case. They are the
-gateway to networks of *machines*, which usually end up interacting with the
+gateway to networks of _machines_, which usually end up interacting with the
 physical world. Think about connected vehicles, factories, robots, and so on.
 
 While working on a remote access box (another name for "industrial router"),
@@ -55,7 +55,7 @@ The first thing that we've noticed was the abundance of technical information
 freely available to the public. Don't get me wrong: I'm not advocating in favor
 of "security through obscurity" nor "closed source". Once I believe in
 openness, I also believe that critical targets like industrial routers (which
-are put in front of supposedly critical machinery), shouldn't be *that* easy
+are put in front of supposedly critical machinery), shouldn't be _that_ easy
 for a casual attacker to discover. Ironically, marketing brochures required
 a registration, whereas firmware and technical manuals were directly indexed by
 search engines and publicly accessible.

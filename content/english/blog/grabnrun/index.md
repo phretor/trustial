@@ -11,7 +11,6 @@ date: 2015-08-05T17:34:45+02:00
 featured: false
 draft: false
 
-
 # Projects (optional).
 #   Associate this post with one or more of your projects.
 #   Simply enter your project's folder or file name without extension.
@@ -33,4 +32,3 @@ Android APIs, and its design enforces that even the most inexperienced
 developer cannot perform well-known, serious mistakes.
 
 Check out the source code: [github.com/lukeFalsina/Grab-n-Run](https://github.com/lukeFalsina/Grab-n-Run)
-

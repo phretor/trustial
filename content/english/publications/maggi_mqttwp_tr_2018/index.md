@@ -12,4 +12,3 @@ institution: "Trend Micro, Inc."
 publication: "Trend Micro Research"
 url_pdf: "https://www.trendmicro.com/vinfo/us/security/news/internet-of-things/mqtt-and-coap-security-and-privacy-issues-in-iot-and-iiot-communication-protocols"
 ---
-

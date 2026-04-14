@@ -13,7 +13,6 @@ featured: false
 draft: false
 image: featured.png
 
-
 # Projects (optional).
 #   Associate this post with one or more of your projects.
 #   Simply enter your project's folder or file name without extension.
@@ -45,7 +44,7 @@ While there are some must-read stories every week (which are found in the set-in
 
 ## From Consuming to Creating
 
-I decided I wanted to get to the source of each news I read. So, I started to systematize my reading list into a taxonomy and, month over month, I've been feeling I'd improved the way I consume readings, gaining more confidence in the difficult task of telling apart interesting from non-interesting news stories. I mean, interesting for my work, of course. Sometimes my work is interesting to the public, so, very seldom, *my* noteworthy news stories are interesting for others, too.
+I decided I wanted to get to the source of each news I read. So, I started to systematize my reading list into a taxonomy and, month over month, I've been feeling I'd improved the way I consume readings, gaining more confidence in the difficult task of telling apart interesting from non-interesting news stories. I mean, interesting for my work, of course. Sometimes my work is interesting to the public, so, very seldom, _my_ noteworthy news stories are interesting for others, too.
 
 ![Overall workflow](i/cf-overall.png)
 
@@ -108,7 +107,7 @@ My sources include global and local newspapers (there's more than just cyber-sec
 - **Top stuff** I absolutely must read; this group includes RSS feeds from renowned voices in the cyber-security field (e.g., Bruce Schneier, Brian Krebs), top outlets (e.g., Engaged, WIRED, Forbes), top technical blogs (e.g., Google Project Zero), etc.
 - **Specialized sources** that are relevant and low-noise, but one step after the top sources; this include newsletters or digests, the [r/netsec](https://reddit.com/r/netsec) sub-reddit, [Techmeme](https://www.techmeme.com), pure feeds (e.g., vulnerability feeds, news from law enforcements), and press releases from top tech companies.
 - **Non-specialized sources**, which include tech outlets like Gizmodo, Engaged, hand-curated world news (e.g., via [Mediagazer](https://www.mediagazer.com)), personal blogs, trending GitHub repositories, official blogs of top tech companies, etc.
-- **All the rest**. Why do I keep this? First of all because I want to be able to globally search on everything. Secondly, if a news is really important, it will travel far, far away, event to the local free newspaper. So, monitoring the least-popular sources will give you indirect confirmation that something is *really* good, if you know how to interpret signals.
+- **All the rest**. Why do I keep this? First of all because I want to be able to globally search on everything. Secondly, if a news is really important, it will travel far, far away, event to the local free newspaper. So, monitoring the least-popular sources will give you indirect confirmation that something is _really_ good, if you know how to interpret signals.
 
 ![Inoreader tech blogs](i/1-inoreader-tech-blogs.png)
 

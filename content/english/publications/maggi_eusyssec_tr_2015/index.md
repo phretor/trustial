@@ -12,4 +12,3 @@ series: "ERCIM News"
 publication: ""
 url_pdf: "http://ercim-news.ercim.eu/en100/r-i/european-cyber-security-research-and-innovation"
 ---
-

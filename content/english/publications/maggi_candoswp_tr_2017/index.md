@@ -12,4 +12,3 @@ institution: "Trend Micro, Inc."
 publication: "TrendLabs Security Intelligence Blog"
 url_pdf: "https://documents.trendmicro.com/assets/A-Vulnerability-in-Modern-Automotive-Standards-and-How-We-Exploited-It.pdf"
 ---
-

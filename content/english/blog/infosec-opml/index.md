@@ -49,7 +49,7 @@ Here's what you can expect to find in here, in a rough order of descending prior
 - Science
 - All Infosec Relevant
 
-The last folder contains *all* important feeds from previous folders. This just makes it easier to run queries on all relevant sources.
+The last folder contains _all_ important feeds from previous folders. This just makes it easier to run queries on all relevant sources.
 
 ## Contributing
 

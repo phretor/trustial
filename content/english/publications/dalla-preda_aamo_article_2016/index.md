@@ -11,4 +11,3 @@ pages: "1--24"
 publication: "Journal of Computer Virology and Hacking Techniques"
 url_pdf: "http://dx.doi.org/10.1007/s11416-016-0282-2"
 ---
-

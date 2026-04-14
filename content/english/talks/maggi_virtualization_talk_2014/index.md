@@ -12,4 +12,3 @@ howpublished: "Invited Lecture"
 event: "5th Int. Summer Institution on Information Security and Protection"
 event_url: "http://issisp2014.di.univr.it/"
 ---
-

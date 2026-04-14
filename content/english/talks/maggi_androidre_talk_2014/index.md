@@ -12,4 +12,3 @@ howpublished: "Invited Lecture"
 event: "2nd SysSec Summer Institution"
 event_url: "http://www.syssec-project.eu/events/summer-school-2014/program/"
 ---
-

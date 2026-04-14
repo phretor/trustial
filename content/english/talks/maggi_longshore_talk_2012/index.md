@@ -11,4 +11,3 @@ location: "Royal Holloway University of London"
 howpublished: "Invited Talk"
 event: "ISG Research Seminars"
 ---
-

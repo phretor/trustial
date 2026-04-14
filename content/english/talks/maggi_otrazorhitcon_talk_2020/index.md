@@ -3,7 +3,14 @@ title: "Guarding the Factory Floor: Catching Insecure Industrial Robot Programs"
 date: 2020-09-12
 publishDate: 2020-09-12T00:00:00Z
 lastmod: 2020-09-14T12:08:12.159845Z
-authors: ["Federico Maggi", "Marcello Pogliani", "Davide Quarta", "Stefano Zanero", "Marco Balduzzi"]
+authors:
+  [
+    "Federico Maggi",
+    "Marcello Pogliani",
+    "Davide Quarta",
+    "Stefano Zanero",
+    "Marco Balduzzi",
+  ]
 publication_types: ["3"]
 abstract: "What if a perfectly patched industrial manufacturing machine can still harbor for vulnerabilities where no one is looking? What if the powerful programming languages used to program these machines can go beyond simple movement instructions, and actually allow threat actors to hide malware into the logic?  Industrial robot OEMs provide proprietary, legacy programming languages to automate these complex machines. Mostly offering movement primitives, theseprogramming languages also give access to low-level system resources like files, network sockets, and some even allow memory and program pointer. While useful, these features may lead to insecure programming patterns such as input-validation vulnerabilities. Also, they’re powerful enough to allow the implementation of advanced malware functionalities, with an underlying runtime environment that provides no resource isolation.  After going through the technical features of the languages by eight leading OEMs, we'll share cases of vulnerable and malicious usage. We'll then present a static code analyzer that we created and patented, to scan robotic programs and discover unsafe code patterns. Our evaluation on 100 automation task program files show that insecure patterns are indeed found in real-world code, and that static source code analysis is an effective defense tool in the short term."
 featured: false
@@ -13,4 +20,3 @@ event: "HITCON"
 event_url: "https://hitcon.org/2020/agenda/93ba0758-bd84-43ae-9da0-b389fde2803b/"
 url_video: https://www.youtube.com/watch?v=g2h2EQWan3E
 ---
-

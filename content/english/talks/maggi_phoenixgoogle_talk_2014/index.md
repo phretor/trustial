@@ -11,4 +11,3 @@ location: "Google, Mountain View, CA, USA"
 howpublished: "Invited Talk"
 event: "Google Tech Talk"
 ---
-

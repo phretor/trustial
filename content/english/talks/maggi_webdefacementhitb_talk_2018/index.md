@@ -13,4 +13,3 @@ event: "Hack In The Box Dubai"
 event_url: "https://conference.hitb.org/hitbsecconf2018dxb/sessions/using-machine-learning-to-investigate-web-campaigns-at-large/"
 url_video: https://www.youtube.com/watch?v=3F44JbkaU7k
 ---
-

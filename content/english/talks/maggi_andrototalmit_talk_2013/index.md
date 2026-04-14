@@ -11,4 +11,3 @@ location: "MIT, Boston, Massachussets, USA"
 howpublished: "Invited Talk"
 event: "MIT CSAIL-POLIMI Workshop"
 ---
-

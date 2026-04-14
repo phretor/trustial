@@ -11,4 +11,3 @@ pages: "1--9"
 isbn: "978-1-4577-1449-8"
 publication: "Proceedings of the Worldwide Cybersecurity Summit"
 ---
-

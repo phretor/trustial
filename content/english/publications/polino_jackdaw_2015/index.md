@@ -13,4 +13,3 @@ isbn: "978-3-319-20549-6 978-3-319-20550-2"
 publication: "Detection of Intrusions and Malware, and Vulnerability Assessment"
 url_pdf: "http://link.springer.com/chapter/10.1007/978-3-319-20550-2_7"
 ---
-

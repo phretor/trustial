@@ -1,21 +1,32 @@
 <!-- Publication Metadata -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+<div
+  class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
   {{ if .Params.institution }}
     <div class="flex items-start">
-      <i class="fa-solid fa-building text-gray-600 dark:text-gray-400 mr-2 mt-1"></i>
+      <i
+        class="fa-solid fa-building text-gray-600 dark:text-gray-400 mr-2 mt-1"></i>
       <div>
-        <span class="text-sm font-medium text-gray-600 dark:text-gray-400 block">Institution</span>
-        <span class="text-gray-900 dark:text-white">{{ .Params.institution }}</span>
+        <span class="text-sm font-medium text-gray-600 dark:text-gray-400 block"
+          >Institution</span
+        >
+        <span class="text-gray-900 dark:text-white"
+          >{{ .Params.institution }}</span
+        >
       </div>
     </div>
   {{ end }}
 
   {{ if .Date }}
     <div class="flex items-start">
-      <i class="fa-solid fa-calendar text-gray-600 dark:text-gray-400 mr-2 mt-1"></i>
+      <i
+        class="fa-solid fa-calendar text-gray-600 dark:text-gray-400 mr-2 mt-1"></i>
       <div>
-        <span class="text-sm font-medium text-gray-600 dark:text-gray-400 block">Published</span>
-        <time datetime="{{ .Date.Format "2006-01-02" }}" class="text-gray-900 dark:text-white">
+        <span class="text-sm font-medium text-gray-600 dark:text-gray-400 block"
+          >Published</span
+        >
+        <time
+          datetime="{{ .Date.Format "2006-01-02" }}"
+          class="text-gray-900 dark:text-white">
           {{ .Date.Format "January 2, 2006" }}
         </time>
       </div>
@@ -24,20 +35,32 @@
 
   {{ if .Params.publication_types }}
     <div class="flex items-start">
-      <i class="fa-solid fa-file-alt text-gray-600 dark:text-gray-400 mr-2 mt-1"></i>
+      <i
+        class="fa-solid fa-file-alt text-gray-600 dark:text-gray-400 mr-2 mt-1"></i>
       <div>
-        <span class="text-sm font-medium text-gray-600 dark:text-gray-400 block">Type</span>
+        <span class="text-sm font-medium text-gray-600 dark:text-gray-400 block"
+          >Type</span
+        >
         <span class="text-gray-900 dark:text-white">
           {{ range .Params.publication_types }}
-            {{ if eq . "1" }}Journal Article
-            {{ else if eq . "2" }}Conference Paper
-            {{ else if eq . "3" }}Preprint
-            {{ else if eq . "4" }}Technical Report
-            {{ else if eq . "5" }}Book
-            {{ else if eq . "6" }}Book Chapter
-            {{ else if eq . "7" }}Thesis
-            {{ else if eq . "8" }}Patent
-            {{ else }}Publication
+            {{ if eq . "1" }}
+              Journal Article
+            {{ else if eq . "2" }}
+              Conference Paper
+            {{ else if eq . "3" }}
+              Preprint
+            {{ else if eq . "4" }}
+              Technical Report
+            {{ else if eq . "5" }}
+              Book
+            {{ else if eq . "6" }}
+              Book Chapter
+            {{ else if eq . "7" }}
+              Thesis
+            {{ else if eq . "8" }}
+              Patent
+            {{ else }}
+              Publication
             {{ end }}
           {{ end }}
         </span>
@@ -47,10 +70,15 @@
 
   {{ if .Params.publication }}
     <div class="flex items-start">
-      <i class="fa-solid fa-journal-whills text-gray-600 dark:text-gray-400 mr-2 mt-1"></i>
+      <i
+        class="fa-solid fa-journal-whills text-gray-600 dark:text-gray-400 mr-2 mt-1"></i>
       <div>
-        <span class="text-sm font-medium text-gray-600 dark:text-gray-400 block">Publication</span>
-        <span class="text-gray-900 dark:text-white">{{ .Params.publication }}</span>
+        <span class="text-sm font-medium text-gray-600 dark:text-gray-400 block"
+          >Publication</span
+        >
+        <span class="text-gray-900 dark:text-white"
+          >{{ .Params.publication }}</span
+        >
       </div>
     </div>
   {{ end }}

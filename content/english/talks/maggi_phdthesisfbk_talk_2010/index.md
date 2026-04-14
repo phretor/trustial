@@ -11,4 +11,3 @@ location: "Fondazione Bruno Kessler, Trento"
 howpublished: "Invited Talk"
 publication: ""
 ---
-

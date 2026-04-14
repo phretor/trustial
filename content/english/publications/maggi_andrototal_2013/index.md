@@ -15,4 +15,3 @@ publication: "Proceedings of the Third ACM Workshop on Security and Privacy in S
 tags: ["workshop"]
 url_pdf: "http://doi.acm.org/10.1145/2516760.2516768"
 ---
-

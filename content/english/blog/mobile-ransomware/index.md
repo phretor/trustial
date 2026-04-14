@@ -25,6 +25,7 @@ image: featured.jpg
 #   Otherwise, set `projects = []`.
 projects: []
 ---
+
 I've started this project while advising a Master student who was interested
 in machine learning. As I've been using machine learning since around 2006, I
 was immediately hooked by the idea of using it to determine whether an
@@ -68,7 +69,7 @@ Was a great experience!
 If you're curious, you can read a summarized version of the research in these
 two blog posts:
 
-* [Mobile Ransomware: Pocket-Sized Badness](https://blog.trendmicro.com/trendlabs-security-intelligence/mobile-ransomware-pocket-sized-badness/)
-* [Mobile Ransomware: How to Protect Against It](https://blog.trendmicro.com/trendlabs-security-intelligence/mobile-ransomware-protect/)
+- [Mobile Ransomware: Pocket-Sized Badness](https://blog.trendmicro.com/trendlabs-security-intelligence/mobile-ransomware-pocket-sized-badness/)
+- [Mobile Ransomware: How to Protect Against It](https://blog.trendmicro.com/trendlabs-security-intelligence/mobile-ransomware-protect/)
 
 Here's the [web service (archived)](https://web.archive.org/web/20180216035340/http://ransom.mobi/) in case you want to check it out.

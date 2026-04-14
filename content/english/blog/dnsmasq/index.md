@@ -44,5 +44,4 @@ version of Dnsmasq, the chain of pre-conditions for these vulnerabilities to be
 exploitable are not super trivial. So I decided to write them down in
 a flowchart.
 
-
 You can read [the full blog post here](http://blog.trendmicro.com/trendlabs-security-intelligence/dnsmasq-reality-check-remediation-practices/)!

@@ -149,8 +149,8 @@ RFQuacks comes with a powerful packet modification module:
     - (AND, OR, XOR, NOT, SLEFT, SRIGHT) + `operand` field.
     - (PREPEND, APPEND, INSERT) + `payload` field.
     - NOT.
-  - `operand` (byte) is the "right" value for the operations that need it *(AND, OR, XOR, NOT, SLEFT, SRIGHT)*.
-  - `payload` (byte) is the "payload" value for the operations that need it *(PREPEND, APPEND, INSERT)*.
+  - `operand` (byte) is the "right" value for the operations that need it _(AND, OR, XOR, NOT, SLEFT, SRIGHT)_.
+  - `payload` (byte) is the "payload" value for the operations that need it _(PREPEND, APPEND, INSERT)_.
   - `pattern` (string) a regular-expression pattern complying with the [tiny-regex-c](https://github.com/kokke/tiny-regex-c), to restrict modifications to matching packets only.
 - `q.packet_modification.reset()` will delete any stored rule.
 - `q.packet_modification.dump()` will dump to CLI any stored rule.
@@ -185,7 +185,7 @@ In [74]: q.packet_modification.add(
 
 In [76]: q.packet_filter.enabled = True # enable packet filtering
 In [77]: q.packet_modification.enabled = True # enable packet manipulation
-````
+```
 
 **Example:** Let's say you are capturing packets by mean of a specific syncword filter; the radio will _consume_ the preamble and the specified syncword to recognize the packet and, consequently, sends you the remaining payload.
 You are not happy with this and want to _prepend_ the consumed part. Well, nothing easier:
@@ -877,7 +877,6 @@ Help for 'radioA':
 
 Check src/rfquack.proto for type definitions
 ```
-
 
 ## Support & More
 

@@ -42,6 +42,7 @@ actors taking strong positions on real-world conflicts.
 How do we know what we know about this phenomenon? Let's take a look!
 
 ## The Tool
+
 Last year at [Black Hat US Arsenal](https://twitter.com/toolswatch) my
 colleagues and I released [part of the source code of
 DefPloreX](https://github.com/trendmicro/defplorex), the tool-chain that we use
@@ -72,7 +73,6 @@ interactivity aspect of the investigation.
 ![DefPloreX web app main screen](https://github.com/trendmicro/defplorex/blob/master/i/dpx-clusters-viz.png?raw=true "DefPloreX web app main screen")
 
 If you want to see the web app in action, you can take yourself a 14 minutes coffee or tea break while watching this demo.
-
 
 {{< youtube DILbSXYpiMU >}}
 
@@ -187,7 +187,7 @@ class TagTransformer(Transformer):
         return dict(tags=tags)      # return the enriched JSON
 ```
 
-The output of this transformation is automatically handled by our Elastic 
+The output of this transformation is automatically handled by our Elastic
 wrapper (see `backend.elastic.ESStorer`) and the
 `transformer.Pipeline` class, which merges the new (partial) document with the
 original one and saves it into the ES index. Actually, this is
@@ -205,6 +205,7 @@ a subclass of `Transformer`, which takes as input a document, and returns the
 enriched or modified fields.
 
 ## The White Paper
+
 With the help of our great colleagues at TrendLabs, we prepared a [white
 paper](https://www.trendmicro.com/vinfo/us/security/news/cyber-attacks/web-defacements-exploring-the-methods-of-hacktivists)
 that focuses on the major campaigns, and how DefPloreX helped explore them. In
@@ -213,8 +214,7 @@ India, Syria, Kosovo, and countries surrounding the South China Sea. We dig
 into specific conflicts in those areas and the defacements that happened in the
 aftermath.
 
-![A Deep Dive into Defacement: How Geopolitical Events Trigger Web Attacks](i/wp.jpg
- "A Deep Dive into Defacement: How Geopolitical Events Trigger Web Attacks")
+![A Deep Dive into Defacement: How Geopolitical Events Trigger Web Attacks](i/wp.jpg "A Deep Dive into Defacement: How Geopolitical Events Trigger Web Attacks")
 
 To ~~feed our curiosity and~~~ help CERTs understand better the origin of these
 attacks and modus-operandi of the groups, we also look how they are organized
@@ -222,6 +222,7 @@ attacks and modus-operandi of the groups, we also look how they are organized
 hackers), as well as how their recruitment tools and the methods adopt.
 
 ## The ~~Devil~~ Answer is in the Details
+
 You might be wondering how exactly the data-mining workflow works, what
 features we use, what clustering algorithm and so on. For the impatient, here's a quick overview of the data that we process and the features that we extract:
 

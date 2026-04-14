@@ -12,4 +12,3 @@ institution: "Trend Micro, Inc."
 publication: "Trend Micro Research"
 url_pdf: "https://www.trendmicro.com/vinfo/us/security/news/internet-of-things/threats-and-consequences-a-security-analysis-of-smart-manufacturing-systems"
 ---
-
