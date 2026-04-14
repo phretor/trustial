@@ -2,6 +2,10 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Security
+
+**This repository is public.** Never commit credentials, API keys, tokens, private contact details, internal URLs, or any other security-sensitive content to any file in this repo.
+
 ## What this is
 
 Federico Maggi's personal professional website ([trustial.org](https://trustial.org)) — a static site built with Hugo + Hugoplate theme + TailwindCSS 4. Deployed to GitHub Pages via Actions on push to `main`.

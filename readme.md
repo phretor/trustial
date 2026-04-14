@@ -170,6 +170,40 @@ content/english/
 - **Analytics**: Google Analytics integration
 - **SEO Optimized**: Meta tags, structured data, and performance optimization
 
+## Maintaining the site with Claude Code
+
+This site is maintained via [Claude Code](https://claude.ai/code). The `CLAUDE.md` file at the repo root gives Claude the context it needs to work autonomously.
+
+### Common tasks you can ask Claude to do
+
+| Task                  | Example prompt                                                     |
+| --------------------- | ------------------------------------------------------------------ |
+| Add a blog post       | "Add a blog post titled '…' with this content: …"                  |
+| Add a publication     | "Add publication: title, authors, venue, year, abstract, PDF link" |
+| Add a talk            | "Add talk: title, event, year, slides/video link"                  |
+| Update review service | "I'm also reviewing for XYZ 2026"                                  |
+| Update the about page | "Update the about section with …"                                  |
+| Fix content           | "The link on the '…' post is broken, update it to …"               |
+
+### Workflow
+
+Claude will:
+
+1. Make the requested changes
+2. Run `npm run build` to verify no errors
+3. Ask whether to commit and push
+
+If the build fails, Claude will diagnose and fix before asking to commit.
+
+### Pre-commit hooks
+
+[prek](https://github.com/your-repo/prek) is installed and runs on every commit:
+
+- **prettier** — formats HTML, JSON, Markdown, and YAML
+- **zizmor** — audits GitHub Actions workflows for security issues
+
+If a hook fails on commit, Claude will fix the issue before retrying.
+
 ## Maintenance & Updates
 
 ### Regular Maintenance
