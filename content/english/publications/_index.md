@@ -2,7 +2,7 @@
 title: Research
 meta_title: Research by Federico Maggi | Trustial
 aliases:
-- /research
+  - /research
 
 view: 4
 
@@ -18,7 +18,8 @@ I've spent more than a decade doing scientific research in various cybersecurity
 
 I'm not active anymore, but I'm still serving in various program committees and review boards.
 
-- 2025: Back Hat US, EU, WOOT
+- 2026: Black Hat US, RAID
+- 2025: Black Hat US, EU, WOOT
 - 2024: Black Hat, DIMVA PC Chair, RAID, WOOT, ACSAC
 - 2023: Black Hat, DIMVA PC Co-chair
 - 2022: Black Hat EU, ACSAC, DIMVA, EuroSec
