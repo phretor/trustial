@@ -1,0 +1,36 @@
+# Trustial — Federico Maggi
+
+> Federico Maggi is a cybersecurity engineer, researcher, and advisor. Two decades of work across firmware, hardware, root of trust, attestation, ICS/OT, RF, embedded systems, and ML-based anomaly detection. Currently a Security Engineering Manager at AWS with focus on platform security for hyperscale datacenters.
+
+## About
+
+- [About](https://trustial.org/about/): full bio, career history, press coverage, formal short-bio for re-use, headshot, public-speaking background, review board and conference service.
+- [Contact](https://trustial.org/contact/): preferred channels (e-mail, Twitter/X, BlueSky, Mastodon, LinkedIn, Discord).
+
+## Research
+
+- [Publications index](https://trustial.org/publications/): full list of peer-reviewed papers, technical reports, and journal articles co-authored by Federico Maggi between 2007 and 2021. Topics include anomaly detection, malware analysis, mobile security, ICS/OT security, RF security, automotive, industrial robots, web security, fraud, and DDoS.
+- [Talks index](https://trustial.org/talks/): conference talks at Black Hat (US, EU, Asia), HITB, HITCON, DIMVA, ACSAC, and academic venues — slides and abstracts.
+- [Advisories](https://trustial.org/advisories/): security advisories Federico has authored or co-authored.
+
+## Writing
+
+- [Blog](https://trustial.org/blog/): essays and write-ups on cybersecurity supercommunication, platform security, hardware/firmware research, and personal notes.
+- [Become a Cybersecurity Supercommunicator](https://trustial.org/blog/become-cybersecurity-supercommunicator/): on technical communication and speaker coaching, drawing from the Black Hat Speaker Coach program experience.
+
+## Notable individual publications
+
+- [RFQuack: A Universal Hardware-Software Toolkit for Wireless Protocol (Security) Analysis and Research (2021)](https://trustial.org/publications/maggi_rfquack_tr_2021/): RF security toolkit combining SDR flexibility with embedded-RF determinism.
+- [Industrial Radios — Attacking Radio Frequency Remote Controllers (2019)](https://trustial.org/publications/maggi_industrialradios_2019/): vulnerability disclosure across seven RF remote controller vendors used in cranes, drills, and industrial machinery.
+- [OTRazor: Static Code Analysis for Vulnerability Discovery in Industrial Automation Programs (2020)](https://trustial.org/publications/pogliani_otrazor_2020/): static analyzer for proprietary industrial robot programming languages.
+- [ShieldFS: A Self-healing, Ransomware-aware Filesystem (2016)](https://trustial.org/publications/continella_shieldfs_2016/): ransomware-aware filesystem with rollback.
+- [DefPloreX: A Machine Learning Toolkit for Large-scale e-Crime Forensics (2018)](https://trustial.org/publications/maggi_defplorex_2018/): ML-powered toolkit for analyzing large web-defacement datasets.
+
+## Press coverage
+
+Federico's work has been featured in Bloomberg, Wired, Forbes, Hackread, ZDNet, and MIT Technology Review — see the [About page](https://trustial.org/about/) for direct links.
+
+## Site
+
+- Source code: https://github.com/phretor/trustial
+- License: original content is CC BY-NC-ND 4.0 unless otherwise stated.

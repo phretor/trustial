@@ -62,7 +62,20 @@ content = "You must replace the **baseURL** in **hugo.toml** file when deploying
 # seo meta data for OpenGraph / Twitter Card
 # seo module: https://github.com/gethugothemes/hugo-modules/tree/master/seo-tools/basic-seo
 [metadata]
-keywords = ["cyber security", "security network security", "penetration testing", "security companies", "computer network security"]
+keywords = [
+  "platform security",
+  "hardware security",
+  "firmware security",
+  "root of trust",
+  "attestation",
+  "confidential computing",
+  "silicon security",
+  "embedded systems security",
+  "ICS/OT security",
+  "RF security",
+  "anomaly detection",
+  "post-quantum cryptography",
+]
 description = "Cybersecurity engineer, researcher, and advisor with broad technical and scientific experience on designing, analyzing, and testing security-critical systems."
 author = "Federico Maggi"
 twitter = "phretor"

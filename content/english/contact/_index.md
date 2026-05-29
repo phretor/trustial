@@ -2,6 +2,7 @@
 title: "Contact"
 meta_title: "Contact Federico Maggi | Trustial"
 description: "Contact Federico Maggi"
+date: 2026-05-29
 draft: false
 ---
 

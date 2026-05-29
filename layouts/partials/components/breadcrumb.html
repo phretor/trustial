@@ -1,0 +1,27 @@
+{{ if not .IsHome }}
+  <nav aria-label="Breadcrumb" class="mb-4 text-sm">
+    <ol class="inline-flex flex-wrap items-center gap-1">
+      <li>
+        <a
+          class="text-primary dark:text-darkmode-primary"
+          href="{{ site.Home.RelPermalink }}"
+          >Home</a
+        >
+        <span class="mx-1">/</span>
+      </li>
+      {{ if and (eq .Kind "page") .CurrentSection (not .CurrentSection.IsHome) }}
+        <li>
+          <a
+            class="text-primary dark:text-darkmode-primary"
+            href="{{ .CurrentSection.RelPermalink }}"
+            >{{ .CurrentSection.Title }}</a
+          >
+          <span class="mx-1">/</span>
+        </li>
+      {{ end }}
+      <li>
+        <span aria-current="page">{{ .Title }}</span>
+      </li>
+    </ol>
+  </nav>
+{{ end }}
