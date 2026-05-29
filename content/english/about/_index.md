@@ -1,7 +1,7 @@
 ---
 title: "About Me, About Trustial"
 meta_title: "About Trustial - Federico Maggi's Space"
-description: "this is meta description"
+description: "Federico Maggi — cybersecurity engineer, researcher, and advisor. Two decades of work in firmware, hardware, ICS/OT, RF, and ML-based anomaly detection."
 image: "/images/avatar.png"
 draft: false
 ---

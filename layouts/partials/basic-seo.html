@@ -1,0 +1,257 @@
+<!-- base url -->
+{{ if or (eq site.BaseURL "/") (eq site.BaseURL "http://localhost:1313/") }}
+{{ else }}
+  <base href="{{ .Permalink }}" />
+{{ end }}
+
+
+<!-- title -->
+{{ $title := site.Title }}
+{{ if .Params.meta_title }}
+  {{ $title = .Params.meta_title }}
+{{ else if .Params.title }}
+  {{ $title = .Params.title }}
+{{ end }}
+
+
+<title>{{ $title }}</title>
+
+<!-- meta noindex -->
+{{ if .Param "noindex" }}
+  <meta name="robots" content="noindex,nofollow" />
+{{ end }}
+
+
+<!-- meta canonical (self-referencing by default, overridable via .Params.canonical) -->
+<link
+  rel="canonical"
+  href="{{ .Params.canonical | default .Permalink }}"
+  itemprop="url" />
+
+<!-- multilingual SEO optimizations -->
+{{ if .IsTranslated }}
+  {{ range .AllTranslations }}
+    <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}" />
+  {{ end }}
+  <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}" />
+{{ end }}
+
+
+<!-- meta keywords -->
+{{ if .Params.keywords }}
+  <meta name="keywords" content="{{ delimit .Params.keywords `, ` }}" />
+{{ else if site.Params.metadata.keywords }}
+  <meta
+    name="keywords"
+    content="{{ delimit site.Params.metadata.keywords `, ` }}" />
+{{ end }}
+
+
+<!-- meta description (prefers page description, then abstract truncated to 157, then site default) -->
+{{ $metaDesc := .Params.description }}
+{{ if not $metaDesc }}
+  {{ with .Params.abstract }}
+    {{ $metaDesc = truncate 157 . }}
+  {{ end }}
+{{ end }}
+{{ if not $metaDesc }}
+  {{ $metaDesc = site.Params.metadata.description }}
+{{ end }}
+<meta name="description" content="{{ $metaDesc }}" />
+
+<!-- meta author -->
+{{ with site.Params.metadata.author }}
+  <meta name="author" content="{{ . }}" />
+{{ end }}
+
+
+<!-- description used for og/twitter (mirrors meta description selection above) -->
+{{ $description := $metaDesc }}
+{{ if .Params.meta_description }}
+  {{ $description = .Params.meta_description }}
+{{ end }}
+
+
+<!-- checking og image -->
+{{ $imagePath := site.Params.metadata.image }}
+{{ if .Params.meta_image }}
+  {{ $imagePath = .Params.meta_image }}
+{{ else if .Params.images }}
+  {{ range first 1 .Params.images }}
+    {{ $imagePath = . }}
+  {{ end }}
+{{ else if .Params.image }}
+  {{ $imagePath = .Params.image }}
+{{ end }}
+
+
+<!-- ######### Opengraph and Twitter image meta ############## -->
+{{ if or (hasPrefix $imagePath "http") (fileExists (add `static/` (string $imagePath))) }}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="{{ $imagePath | absURL }}" />
+  <meta property="og:image" content="{{ $imagePath | absURL }}" />
+{{ else }}
+  {{ $contentImage := .Resources.GetMatch (printf "*%s*" $imagePath) }}
+  {{ $assetImage := fileExists (add `assets/` (string $imagePath)) }}
+
+  {{ if or $contentImage $assetImage }}
+    {{ if $contentImage }}
+      {{ .Scratch.Set "image-exists" $contentImage }}
+    {{ else if $assetImage }}
+      {{ .Scratch.Set "image-exists" (resources.Get $imagePath) }}
+    {{ end }}
+
+    {{ $image := .Scratch.Get "image-exists" }}
+    {{ $imageExt := path.Ext $image }}
+    {{ $imageExtClean := strings.TrimPrefix "." $imageExt }}
+
+    {{ if ne $imageExt `.svg` }}
+      {{ $imageWidth := $image.Width }}
+      {{ $imageHeight := $image.Height }}
+      {{ if (and (gt $imageWidth 144) (gt $imageHeight 144)) }}
+        <meta property="og:image" content="{{ $image.Permalink }}" />
+        <meta name="twitter:image" content="{{ $image.Permalink }}" />
+        <meta
+          name="twitter:card"
+          content="{{- if (and (gt $imageWidth 300) (gt $imageHeight 157) (not (eq $imageWidth $imageHeight))) -}}
+            summary_large_image
+          {{- else -}}
+            summary
+          {{- end -}}" />
+      {{ end }}
+      <meta property="og:image:width" content="{{ $imageWidth }}" />
+      <meta property="og:image:height" content="{{ $imageHeight }}" />
+    {{ end }}
+
+
+    <meta
+      property="og:image:type"
+      content="image/{{- if eq $imageExt `.svg` -}}
+        svg+xml
+      {{- else -}}
+        {{- replaceRE `^jpg$` `jpeg` $imageExtClean -}}
+      {{- end -}}" />
+  {{ end }}
+{{ end }}
+<!-- ######### /Opengraph and Twitter image meta ############## -->
+
+<!-- ######### opengraph others meta ############## -->
+<meta property="og:title" content="{{ $title }}" />
+<meta property="og:description" content="{{ $description }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ .Permalink }}" />
+
+<!-- ########## twitter others meta ############### -->
+<meta name="twitter:title" content="{{ $title }}" />
+<meta name="twitter:description" content="{{ $description }}" />
+
+{{ with site.Params.metadata.twitter }}
+  <meta name="twitter:site" content="@{{ . }}" />
+  <meta name="twitter:creator" content="@{{ . }}" />
+{{ end }}
+
+
+<!-- ########## JSON-LD structured data ########## -->
+{{ $socials := slice }}
+{{ range (index site.Data.social "main") }}
+  {{ $socials = $socials | append .link }}
+{{ end }}
+
+{{ if .IsHome }}
+  {{ $website := dict
+    "@context" "https://schema.org"
+    "@type" "WebSite"
+    "url" site.BaseURL
+    "name" site.Title
+    "description" site.Params.metadata.description
+    "publisher" (dict
+    "@type" "Person"
+    "name" site.Params.metadata.author
+    "url" (printf "%sabout/" site.BaseURL)
+    )
+  }}
+  <script type="application/ld+json">
+    {{ $website | jsonify (dict "indent" "  ") | safeJS }}
+  </script>
+{{ end }}
+
+{{ if eq .Section "about" }}
+  {{ $person := dict
+    "@context" "https://schema.org"
+    "@type" "Person"
+    "name" site.Params.metadata.author
+    "url" .Permalink
+    "image" ($imagePath | absURL)
+    "jobTitle" "Cybersecurity Engineer, Researcher, Advisor"
+    "description" site.Params.metadata.description
+    "sameAs" $socials
+    "knowsAbout" (slice
+    "Firmware Security"
+    "Hardware Security"
+    "Industrial Control Systems"
+    "Operational Technology Security"
+    "Radio Frequency Security"
+    "Embedded Systems Security"
+    "Anomaly Detection"
+    "Machine Learning"
+    )
+  }}
+  <script type="application/ld+json">
+    {{ $person | jsonify (dict "indent" "  ") | safeJS }}
+  </script>
+{{ end }}
+
+{{ if and (eq .Section "publications") (eq .Kind "page") }}
+  {{ $authors := slice }}
+  {{ range .Params.authors }}
+    {{ $authors = $authors | append (dict "@type" "Person" "name" .) }}
+  {{ end }}
+  {{ $article := dict
+    "@context" "https://schema.org"
+    "@type" "ScholarlyArticle"
+    "headline" .Title
+    "name" .Title
+    "url" .Permalink
+    "mainEntityOfPage" .Permalink
+    "datePublished" (.Date.Format "2006-01-02")
+  }}
+  {{ if $authors }}
+    {{ $article = merge $article (dict "author" $authors) }}
+  {{ end }}
+  {{ with .Params.abstract }}
+    {{ $article = merge $article (dict "abstract" . "description" (truncate 250 .)) }}
+  {{ end }}
+  {{ with .Params.publication }}
+    {{ $article = merge $article (dict "isPartOf" (dict "@type" "PublicationVolume" "name" .)) }}
+  {{ end }}
+  {{ with .Params.publisher }}
+    {{ $article = merge $article (dict "publisher" (dict "@type" "Organization" "name" .)) }}
+  {{ end }}
+  <script type="application/ld+json">
+    {{ $article | jsonify (dict "indent" "  ") | safeJS }}
+  </script>
+{{ end }}
+
+{{ if and (eq .Section "talks") (eq .Kind "page") }}
+  {{ $authors := slice }}
+  {{ range .Params.authors }}
+    {{ $authors = $authors | append (dict "@type" "Person" "name" .) }}
+  {{ end }}
+  {{ $talk := dict
+    "@context" "https://schema.org"
+    "@type" "PresentationDigitalDocument"
+    "name" .Title
+    "url" .Permalink
+    "datePublished" (.Date.Format "2006-01-02")
+  }}
+  {{ if $authors }}{{ $talk = merge $talk (dict "author" $authors) }}{{ end }}
+  {{ with .Params.abstract }}
+    {{ $talk = merge $talk (dict "abstract" . "description" (truncate 250 .)) }}
+  {{ end }}
+  {{ with .Params.event }}
+    {{ $talk = merge $talk (dict "isPartOf" (dict "@type" "Event" "name" .)) }}
+  {{ end }}
+  <script type="application/ld+json">
+    {{ $talk | jsonify (dict "indent" "  ") | safeJS }}
+  </script>
+{{ end }}
