@@ -513,7 +513,7 @@ Need speaker coaching? [Get in touch](/contact)!
 
 As promised, here's the slide deck. It's quite heavy.
 
-{{< button label="️💾 Grab the slides (224M)" link="https://supercommunicators.trustial.org/" style="solid" >}}
+{{< button label="️💾 Grab the slides (224M)" link="https://www.dropbox.com/scl/fi/cmab47h75gkge5gb9ev6d/BHEU25_Briefings-v6.pptx?rlkey=clpbtnznvcup5et4pj02ghswb&st=qzeammz0&e=1&dl=0" style="solid" >}}
 
 ## References
 
