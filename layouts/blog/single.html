@@ -1,4 +1,35 @@
 {{ define "main" }}
+  {{ $externalUrl := .Params.external_url }}
+  {{ if $externalUrl }}
+    <section class="section pt-7">
+      <div class="container">
+        <div class="row justify-center">
+          {{ $host := (urls.Parse $externalUrl).Host }}
+          <article class="lg:col-10 text-center">
+            <h1 class="h2 mb-4">{{ .Title }}</h1>
+            <p class="mb-6">
+              This post lives on an external site. Redirecting you now&hellip;
+            </p>
+            <p>
+              <a
+                class="btn btn-primary"
+                href="{{ $externalUrl }}"
+                rel="noopener noreferrer">
+                Read on {{ $host }}
+                <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i>
+              </a>
+            </p>
+            <script>
+              window.location.replace({{ $externalUrl }});
+            </script>
+            <noscript>
+              <meta http-equiv="refresh" content="0; url={{ $externalUrl }}" />
+            </noscript>
+          </article>
+        </div>
+      </div>
+    </section>
+  {{ else }}
   <section class="section pt-7">
     <div class="container">
       <div class="row justify-center">
@@ -91,4 +122,5 @@
       {{ end }}
     </div>
   </section>
+  {{ end }}
 {{ end }}
