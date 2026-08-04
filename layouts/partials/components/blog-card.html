@@ -1,11 +1,19 @@
+{{ $externalUrl := .Params.external_url }}
+{{ $href := cond (ne (string $externalUrl) "") (string $externalUrl) .RelPermalink }}
+{{ $linkAttrs := "" }}
+{{ if $externalUrl }}
+  {{ $linkAttrs = ` target="_blank" rel="noopener noreferrer"` }}
+{{ end }}
 <div class="bg-body dark:bg-darkmode-body">
   {{ $image:= .Params.image }}
   {{ if $image }}
     {{ partial "image" (dict "Src" $image "Context" .Page "Alt" .Title "Class" "mb-6 w-full rounded") }}
   {{ end }}
   <h4 class="mb-3">
-    <a href="{{ .RelPermalink }}">
-      {{ .Title }}
+    <a href="{{ $href }}"{{ $linkAttrs | safeHTMLAttr }}>
+      {{ .Title }}{{ if $externalUrl }}
+        <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-sm"></i>
+      {{ end }}
     </a>
   </h4>
   {{ $categories:= .Params.categories }}
@@ -26,7 +34,7 @@
     </ul>
   {{ end }}
   <p class="mb-6">{{ .Summary | plainify }}</p>
-  <a class="btn btn-outline-primary btn-sm" href="{{ .RelPermalink }}">
+  <a class="btn btn-outline-primary btn-sm" href="{{ $href }}"{{ $linkAttrs | safeHTMLAttr }}>
     {{ T "read_more" }}
   </a>
 </div>
