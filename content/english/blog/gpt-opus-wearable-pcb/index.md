@@ -8,7 +8,7 @@ date: 2026-08-04T00:00:00-07:00
 lastmod: 2026-08-04T00:00:00-07:00
 featured: false
 draft: false
-image: featured.jpg
+image: featured.png
 external_url: "https://trustial.substack.com/p/i-let-gpt-opus-build-a-wearable-pcb"
 canonical: "https://trustial.substack.com/p/i-let-gpt-opus-build-a-wearable-pcb"
 noindex: true
