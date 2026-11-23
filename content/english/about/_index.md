@@ -89,7 +89,7 @@ But then something fortunate happened: I was offered to volunteer as part of the
 
 This opportunity kept the momentum going, and gave me the chance to work directly with incredible technical talents from around the world: first-time speakers and seasoned researchers alike, all with important stories to tell, and raw material worth polishing. Helping them shape their talks and make their message shine has been one of the most rewarding experiences of my career.
 
-In cybersecurity, brilliant research and groundbreaking findings risk vanishing into the noise: not because they’re unimportant, but because they’re poorly communicated. If I can help you, please [get in touch](/contacts).
+In cybersecurity, brilliant research and groundbreaking findings risk vanishing into the noise: not because they’re unimportant, but because they’re poorly communicated. If I can help you, please [get in touch](/contact).
 
 Read [more about speaking](/blog/cybersecurity-supercommunicators/).
 
