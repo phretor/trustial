@@ -16,4 +16,4 @@ Known security issues and open risks for this repository. Maintained by Claude C
 - **File**: `package-lock.json`
 - **Status**: Resolved (2026-11-23, pending commit)
 - **Risk**: Vulnerable transitive npm dependencies could expose local and CI builds to denial-of-service or arbitrary file-write attacks.
-- **Fix**: Refresh the npm lockfile with patched overrides for the four vulnerable transitive dependencies, without changing direct dependency versions.
+- **Fix**: Refresh the npm lockfile so `tar`, `picomatch` and `source-map-js` resolve to patched versions within their existing ranges, and override `postcss-selector-parser` to `^6.1.6` under `@tailwindcss/typography` (which pins `6.0.10`), without changing direct dependency versions.
