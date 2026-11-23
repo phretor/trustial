@@ -26,5 +26,11 @@
     "prettier-plugin-go-template": "0.0.15",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^4.1.6"
+  },
+  "overrides": {
+    "picomatch": "2.3.2",
+    "postcss-selector-parser": "6.1.6",
+    "source-map-js": "1.2.4",
+    "tar": "7.5.23"
   }
 }
