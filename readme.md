@@ -143,6 +143,15 @@ content/english/
 - **Talks**: Include presentations in `content/english/talks/`
 - **Static Assets**: Place images and files in `static/` directory
 
+#### Substack sync
+
+New posts on [trustial.substack.com](https://trustial.substack.com) are added as blog redirect stubs by `scripts/sync_substack.py`. A daily GitHub Actions workflow opens a draft pull request when it finds any. See [docs/substack-sync.md](docs/substack-sync.md).
+
+```bash
+python3 scripts/sync_substack.py --dry-run
+python3 scripts/sync_substack.py
+```
+
 ### Theme Customization
 
 - **Layouts**: Custom layouts in `layouts/` directory
