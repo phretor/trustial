@@ -29,58 +29,28 @@
 
 ### Development Dependencies
 
-- Hugo Extended (latest)
+- Hugo Extended 0.149.0
 - Node.js 18+
 - NPM for package management
 - Git for version control
 
-## Deployment Architecture
+## Deployment
 
-### Repository Structure
+The site is built and published from this public repository by
+`.github/workflows/deploy.yml`.
 
-```
-┌─────────────────────────┐    GitHub Actions    ┌─────────────────────────┐
-│ phretor/trustial        │ ──────────────────►  │ phretor/trustial.org    │
-│ (Private Source Repo)   │     Automated CI/CD  │ (Public Hosting Repo)   │
-│                         │                      │                         │
-│ • Hugo source code      │                      │ • Built static files    │
-│ • Content & assets      │                      │ • GitHub Pages hosting  │
-│ • Theme customizations  │                      │ • Public website        │
-└─────────────────────────┘                      └─────────────────────────┘
-```
+- A push to `main` starts the workflow.
+- The build job installs Hugo Extended 0.149.0, checks out this repository,
+  installs the npm dependencies, and runs `npm run build`.
+- The generated `public/` directory is uploaded as a GitHub Pages artifact.
+- The deploy job publishes that artifact with `actions/deploy-pages`, using
+  GitHub's Pages and OpenID Connect permissions. No personal access token or
+  separate deployment repository is required.
+- GitHub Pages serves the site at the custom domain
+  [trustial.org](https://trustial.org), which is declared in `static/CNAME`.
 
-### Automated Deployment
-
-- **Trigger**: Push to `main` branch or manual dispatch
-- **Build Process**: Hugo static site generation with optimizations
-- **Deployment**: Automated deployment to GitHub Pages via separate public repository
-- **Hosting**: Available at the configured GitHub Pages URL
-
-## Configuration & Setup
-
-### Prerequisites
-
-1. **GitHub Personal Access Token** with `repo` permissions
-2. **Target Repository** for hosting (public)
-3. **GitHub Pages** enabled on target repository
-
-### Required Secrets
-
-Add the following secret to your source repository:
-
-```
-DEPLOY_TOKEN = <your-personal-access-token>
-```
-
-### Workflow Configuration
-
-The deployment workflow (`.github/workflows/deploy.yml`) is pre-configured with:
-
-- **Source Repository**: `phretor/trustial` (this repo)
-- **Target Repository**: `phretor/trustial.org`
-- **Branch**: Deploys from `main` to `gh-pages`
-
-To modify the target repository, update the `external_repository` field in the workflow file.
+For local development, install Hugo Extended 0.149.0 and Node.js, then follow
+the development workflow below.
 
 ## Development Workflow
 
@@ -217,8 +187,8 @@ If a hook fails on commit, Claude will fix the issue before retrying.
 
 #### Common Issues
 
-- **Build Failures**: Check Node.js version compatibility
-- **Deployment Errors**: Verify GitHub token permissions
+- **Build Failures**: Check the Hugo Extended and Node.js versions
+- **Deployment Errors**: Inspect the GitHub Pages workflow run
 - **Theme Issues**: Ensure theme version compatibility
 - **Content Rendering**: Validate Markdown syntax and frontmatter
 
@@ -253,7 +223,10 @@ hugo config
 
 ## License
 
-Content and customizations are proprietary. The underlying Hugoplate theme follows its respective MIT license.
+The repository's theme and code are covered by the MIT `LICENSE`. Unless
+otherwise stated, original site content is licensed under
+[CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/), as
+noted in the site's footer.
 
 ---
 
