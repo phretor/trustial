@@ -1,0 +1,5 @@
+# Known legacy local targets outside this site's generated output.
+/blog/compound-machine/license\.txt$
+/blog/build$
+/blog/datasheets/CC1101/CC1101\.pdf$
+/cyberfacts(?:/issue-3)?$
