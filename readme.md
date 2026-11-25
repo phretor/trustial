@@ -115,7 +115,7 @@ content/english/
 
 #### Substack sync
 
-`.github/workflows/sync-substack.yml` checks the public Substack JSON endpoint
+`.github/workflows/sync-substack.yml` checks the public Substack RSS feed
 once a day. `scripts/sync_substack.py` creates an empty-body Hugo leaf bundle
 for each post whose canonical URL is not already present in blog frontmatter,
 downloads its featured image when available, and leaves all existing content
