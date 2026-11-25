@@ -70,6 +70,7 @@ the development workflow below.
    ```
 
 3. **Start development server**:
+
    ```bash
    npm run dev
    # Site available at http://localhost:1313
@@ -95,7 +96,7 @@ npm run update-modules  # Update Hugo modules
 
 #### Directory Structure
 
-```
+```text
 content/english/
 ├── _index.md          # Homepage content
 ├── about/             # About section
@@ -123,6 +124,8 @@ unchanged. The workflow proposes new bundles on
 `automated/substack-sync` through a pull request; it never pushes to `main`.
 
 Run the workflow by hand from **Actions → Sync Substack posts → Run workflow**.
+Select **Dry run** to fetch posts and report the plan without writing files or
+opening a pull request.
 For local inspection only, use:
 
 ```bash
