@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: "23 6 * * *"
   workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Fetch posts and report the plan without writing files or opening a PR.
+        type: boolean
+        default: false
 
 permissions: {}
 
@@ -24,10 +29,13 @@ jobs:
           persist-credentials: false
 
       - name: Sync Substack posts
-        run: python3 scripts/sync_substack.py
+        env:
+          DRY_RUN: ${{ inputs.dry_run && '--dry-run' || '' }}
+        run: python3 scripts/sync_substack.py $DRY_RUN
 
       - name: Detect new bundles
         id: changes
+        if: ${{ !inputs.dry_run }}
         run: |
           if [ -n "$(git status --porcelain -- content/english/blog)" ]; then
             echo "created=true" >> "$GITHUB_OUTPUT"

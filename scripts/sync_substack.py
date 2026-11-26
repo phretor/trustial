@@ -4,17 +4,18 @@
 from __future__ import annotations
 
 import argparse
-import json
+import html
 import re
 import shutil
 import sys
 import urllib.parse
 import urllib.request
+import xml.etree.ElementTree as ElementTree
 from dataclasses import dataclass
-from datetime import datetime
+from email.utils import parsedate_to_datetime
 from pathlib import Path
 
-API_URL = "https://trustial.substack.com/api/v1/posts"
+FEED_URL = "https://trustial.substack.com/feed"
 POST_HOST = "trustial.substack.com"
 USER_AGENT = "trustial-substack-sync/1.0 (+https://trustial.org/)"
 MAX_RESPONSE_BYTES = 10 * 1024 * 1024
@@ -23,6 +24,7 @@ URL_FIELD = re.compile(
     re.MULTILINE,
 )
 SLUG = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
+POST_PATH = re.compile(r"^/p/([a-z0-9]+(?:-[a-z0-9]+)*)$")
 IMAGE_HOSTS = {"substackcdn.com", "substack-post-media.s3.amazonaws.com"}
 
 
@@ -60,50 +62,62 @@ def read_limited(response, limit: int = MAX_RESPONSE_BYTES) -> bytes:
     return data
 
 
-def fetch_json(source: str, timeout: float) -> dict:
+def fetch_feed(source: str, timeout: float) -> ElementTree.Element:
     path = Path(source)
     if path.is_file():
-        return json.loads(path.read_text(encoding="utf-8"))
+        return ElementTree.fromstring(path.read_bytes())
 
     parts = urllib.parse.urlsplit(source)
     if parts.scheme != "https" or parts.hostname != POST_HOST:
         raise ValueError(f"source must be an HTTPS endpoint on {POST_HOST}")
     request = urllib.request.Request(
         source,
-        headers={"Accept": "application/json", "User-Agent": USER_AGENT},
+        headers={
+            "Accept": "application/rss+xml, application/xml;q=0.9, */*;q=0.1",
+            "User-Agent": USER_AGENT,
+        },
     )
     with urllib.request.urlopen(request, timeout=timeout) as response:
         final = urllib.parse.urlsplit(response.geturl())
         if final.scheme != "https" or final.hostname != POST_HOST:
             raise ValueError("source redirected to an untrusted host")
-        return json.loads(read_limited(response))
+        return ElementTree.fromstring(read_limited(response))
 
 
-def parse_posts(payload: dict) -> list[Post]:
+def parse_posts(root: ElementTree.Element) -> list[Post]:
+    channel = root.find("channel")
+    if channel is None:
+        return []
     posts: list[Post] = []
-    for item in payload.get("posts", []):
-        slug = item.get("slug", "")
-        url = normalized_url(item.get("canonical_url", ""))
+    for item in channel.findall("item"):
+        link = (item.findtext("link") or "").strip()
+        url = normalized_url(link)
         parts = urllib.parse.urlsplit(url)
-        if (
-            not SLUG.fullmatch(slug)
-            or parts.scheme != "https"
-            or parts.hostname != POST_HOST
-            or parts.path != f"/p/{slug}"
-        ):
-            print(f"skip invalid post metadata: {slug or '(missing slug)'}", file=sys.stderr)
+        slug_match = POST_PATH.fullmatch(parts.path or "")
+        if parts.scheme != "https" or parts.hostname != POST_HOST or slug_match is None:
+            print(f"skip invalid post link: {link or '(missing)'}", file=sys.stderr)
             continue
-        title = str(item.get("title", "")).strip()
+        slug = slug_match.group(1)
+        title = html.unescape((item.findtext("title") or "").strip())
         if not title:
             print(f"skip post without title: {url}", file=sys.stderr)
             continue
-        description = str(item.get("subtitle") or title).strip()
-        raw_date = str(item.get("post_date", ""))
+        description = html.unescape((item.findtext("description") or "").strip()) or title
+        raw_date = (item.findtext("pubDate") or "").strip()
         try:
-            published = datetime.fromisoformat(raw_date.replace("Z", "+00:00"))
-        except ValueError:
+            published = parsedate_to_datetime(raw_date)
+        except (TypeError, ValueError):
+            published = None
+        if published is None:
             print(f"skip post with invalid date: {url}", file=sys.stderr)
             continue
+        image_url: str | None = None
+        enclosure = item.find("enclosure")
+        if enclosure is not None:
+            enclosure_url = enclosure.get("url")
+            enclosure_type = (enclosure.get("type") or "").lower()
+            if enclosure_url and enclosure_type.startswith("image/"):
+                image_url = enclosure_url
         posts.append(
             Post(
                 slug=slug,
@@ -111,7 +125,7 @@ def parse_posts(payload: dict) -> list[Post]:
                 description=description,
                 url=url,
                 date=published.isoformat(timespec="seconds"),
-                image_url=item.get("cover_image"),
+                image_url=image_url,
             )
         )
     return posts
@@ -190,7 +204,7 @@ def render(post: Post, image_name: str | None) -> str:
 
 
 def sync(source: str, content_dir: Path, timeout: float, dry_run: bool) -> int:
-    posts = parse_posts(fetch_json(source, timeout))
+    posts = parse_posts(fetch_feed(source, timeout))
     linked = existing_links(content_dir)
     created = 0
 
@@ -234,7 +248,11 @@ def sync(source: str, content_dir: Path, timeout: float, dry_run: bool) -> int:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--source", default=API_URL, help="HTTPS API URL or local JSON file")
+    parser.add_argument(
+        "--source",
+        default=FEED_URL,
+        help="HTTPS RSS feed URL or local XML file",
+    )
     parser.add_argument(
         "--content-dir",
         type=Path,
@@ -248,7 +266,7 @@ def main() -> int:
         parser.error(f"content directory does not exist: {args.content_dir}")
     try:
         return sync(args.source, args.content_dir.resolve(), args.timeout, args.dry_run)
-    except (OSError, ValueError, json.JSONDecodeError) as error:
+    except (OSError, ValueError, ElementTree.ParseError) as error:
         print(f"error: {error}", file=sys.stderr)
         return 1
 
