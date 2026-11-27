@@ -116,26 +116,18 @@ content/english/
 
 #### Substack sync
 
-`.github/workflows/sync-substack.yml` checks the public Substack RSS feed
-once a day. `scripts/sync_substack.py` creates an empty-body Hugo leaf bundle
-for each post whose canonical URL is not already present in blog frontmatter,
+The blog has moved to Substack, and the scheduled CI/CD sync job has been
+removed. `scripts/sync_substack.py` is kept for manual local use: it reads the
+public Substack RSS feed and creates an empty-body Hugo leaf bundle for each
+post whose canonical URL is not already present in blog frontmatter,
 downloads its featured image when available, and leaves all existing content
-unchanged. The workflow proposes new bundles on
-`automated/substack-sync` through a pull request; it never pushes to `main`.
+unchanged.
 
-Run the workflow by hand from **Actions → Sync Substack posts → Run workflow**.
-Select **Dry run** to fetch posts and report the plan without writing files or
-opening a pull request.
-For local inspection only, use:
+To fetch posts and report the plan without writing files, use:
 
 ```bash
 python3 scripts/sync_substack.py --dry-run
 ```
-
-The workflow uses only `GITHUB_TOKEN`, with `contents: write` and
-`pull-requests: write`. Pull requests created by `GITHUB_TOKEN` do not trigger
-other workflows, so the normal site build runs after the sync pull request is
-merged to `main`.
 
 ### Theme Customization
 
